@@ -1,0 +1,29 @@
+nav {
+    position: fixed; /* Permet de fixer la navbar */
+    top: 0; /* Place la navbar tout en haut de la page */
+    left: 0; /* Place la navbar tout à gauche de la page */
+    width: 100%; /* Donne une largeur de 100% à la navbar */
+    background-color: #333; /* Couleur de fond de la navbar */
+    overflow: hidden; /* Permet de cacher les éléments qui dépassent de la navbar */
+    z-index: 1; /* Place la navbar au-dessus des autres éléments de la page */
+}
+
+  
+  nav a {
+    float: left; /* Permet d'aligner les éléments à gauche */
+    color: white; /* Couleur du texte */
+    text-align: center; /* Alignement du texte */
+    padding: 14px 16px; /* Espacement entre les éléments */
+    text-decoration: none; /* Suppression du soulignement */
+    font-size: 18px; /* Taille de police */
+  }
+  
+  nav a:hover {
+    background-color: #ddd; /* Couleur de fond au survol */
+    color: black; /* Couleur du texte au survol */
+  }
+  
+  nav a.active {
+    background-color: #4CAF50; /* Couleur de fond de l'élément actif */
+    color: white; /* Couleur du texte de l'élément actif */
+  }
