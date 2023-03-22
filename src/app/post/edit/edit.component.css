@@ -1,0 +1,7 @@
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-top: 60px; /* Ajout de padding-top pour pousser l'élément sous la navbar */
+  
+  }
