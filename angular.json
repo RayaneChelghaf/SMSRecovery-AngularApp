@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-crud-app2": {
+    "SMSRecovery-AngularApp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-crud-app2",
+            "outputPath": "dist/SMSRecovery-AngularApp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "my-crud-app2:build:production"
+              "browserTarget": "SMSRecovery-AngularApp:build:production"
             },
             "development": {
-              "browserTarget": "my-crud-app2:build:development"
+              "browserTarget": "SMSRecovery-AngularApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-crud-app2:build"
+            "browserTarget": "SMSRecovery-AngularApp:build"
           }
         },
         "test": {
@@ -94,5 +94,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "3d76c525-6e8c-4dc4-98c0-49360ca409c3"
   }
 }
