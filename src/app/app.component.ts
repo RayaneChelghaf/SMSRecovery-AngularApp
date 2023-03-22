@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-// import Validation from './utils/validation';
-
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +6,5 @@ import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/fo
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'SMSRecovery-AngularApp';
+  title = 'my-crud-app2';
 }
