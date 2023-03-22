@@ -5,17 +5,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { PostModule } from './post/post.module';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PostModule } from './post/post.module'; // Module concernant le CRUD des messages
 import { AddFournisseurComponent } from './add-fournisseur/add-fournisseur.component';
 import { ListeFournisseursComponent } from './liste-fournisseurs/liste-fournisseurs.component';
+import { ListeDevicesComponent } from './devices/liste-devices.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     AddFournisseurComponent,
-    ListeFournisseursComponent
+    ListeFournisseursComponent,
+    ListeDevicesComponent
   ],
   imports: [
     BrowserModule,
