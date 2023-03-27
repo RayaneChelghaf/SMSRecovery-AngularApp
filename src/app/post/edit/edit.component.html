@@ -1,7 +1,9 @@
 <div class="container">
-    <h1>Update Post</h1>
+    <h1>Éditer le message</h1>
    
-    <a href="#" routerLink="/message/index" class="btn btn-primary">Back</a>
+    <a href="#" routerLink="/message/index" class="btn btn-primary">Retour</a>
+
+    <br>
           
     <form [formGroup]="form" (ngSubmit)="submit()">
     
@@ -18,8 +20,10 @@
             </div>
         </div>
            
+        <br>
+
         <div class="form-group">
-            <label for="body">Contenu</label>
+            <label for="body">Contenu :</label>
             <textarea 
                 formControlName="body"
                 id="body" 
@@ -32,6 +36,8 @@
             </div>
         </div>
          
-        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Update</button>
+        <br>
+
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Mettre à jour</button>
     </form>
 </div>
