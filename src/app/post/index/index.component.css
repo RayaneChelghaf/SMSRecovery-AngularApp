@@ -5,3 +5,25 @@ h1 {
     padding-top: 60px; /* Ajout de padding-top pour pousser l'élément sous la navbar */
   
   }
+
+  .btn-success {
+    padding: 0.5rem 1rem !important;
+    border-radius: 5px;
+    border: none;
+    margin: 100px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #407900;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-success[type="submit"]:hover {
+    background-color: #1f1f1f;
+  }
+  
