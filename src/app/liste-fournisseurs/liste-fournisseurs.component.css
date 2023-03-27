@@ -1,34 +1,50 @@
-/*h1 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 2rem;
-  padding-top: 60px; / Ajout de padding-top pour pousser l'élément sous la navbar /
-
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-ul {
+/* ul {
   list-style: none;
   padding: 0;
   margin: 0;
-}
+} */
 
-li {
+/* li {
   margin-bottom: 0.5rem;
   border: 1px solid #ccc;
   padding: 0.5rem;
   border-radius: 0.25rem;
-}
+} */
 
-*/
+
 h1 {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 2rem;
-  padding-top: 60px; /* Ajout de padding-top pour pousser l'élément sous la navbar */
+  padding-top: 70px; /* Ajout de padding-top pour pousser l'élément sous la navbar */
 
 }
 
 .btn-success {
+
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #407900;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #1f1f1f;
+}
+
+
+
+/* .btn-success {
   padding: 0.5rem 1rem !important;
   border-radius: 5px;
   border: none;
@@ -47,4 +63,4 @@ h1 {
 
 .btn-success[type="submit"]:hover {
   background-color: #1f1f1f;
-}
+} */

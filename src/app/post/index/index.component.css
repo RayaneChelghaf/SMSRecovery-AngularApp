@@ -1,12 +1,39 @@
-h1 {
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ h1 {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 2rem;
-    padding-top: 60px; /* Ajout de padding-top pour pousser l'élément sous la navbar */
+    padding-top: 70px; /* Ajout de padding-top pour pousser l'élément sous la navbar */
   
   }
 
+
   .btn-success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #407900;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+.btn-success:hover {
+    background-color: #1f1f1f;
+  }
+  
+  
+  
+  /* .btn-success {
     padding: 0.5rem 1rem !important;
     border-radius: 5px;
     border: none;
@@ -25,5 +52,5 @@ h1 {
   
   .btn-success[type="submit"]:hover {
     background-color: #1f1f1f;
-  }
+  } */
   
