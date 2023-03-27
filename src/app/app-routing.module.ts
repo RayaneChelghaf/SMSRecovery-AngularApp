@@ -7,10 +7,11 @@ import { ListeFournisseursComponent } from './liste-fournisseurs/liste-fournisse
 import { ListeDevicesComponent } from './devices/liste-devices.component';
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'add-fournisseur', component: AddFournisseurComponent },
   { path: 'liste-fournisseurs', component: ListeFournisseursComponent },
   { path: 'liste-devices', component: ListeDevicesComponent },
-  { path: 'home', component: HomeComponent },
 
 
 ];
