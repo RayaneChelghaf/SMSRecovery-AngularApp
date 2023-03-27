@@ -1,31 +1,17 @@
-// import { NgModule } from '@angular/core';
-// import { RouterModule, Routes } from '@angular/router';
-
-// const routes: Routes = [];
-
-// @NgModule({
-//   imports: [RouterModule.forRoot(routes)],
-//   exports: [RouterModule]
-// })
-// export class AppRoutingModule { }
-
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
-//  import { HomeComponent } from './home.component';
-// import { IndexComponent } from './index/index.component';
-// import { CreateComponent } from './create/create.component';
 import { AddFournisseurComponent } from './add-fournisseur/add-fournisseur.component';
 import { ListeFournisseursComponent } from './liste-fournisseurs/liste-fournisseurs.component';
 import { ListeDevicesComponent } from './devices/liste-devices.component';
 
 const routes: Routes = [
-  // { path: 'home', component: HomeComponent },
-  // { path: 'message/index', component: IndexComponent },
-  // { path: 'message/create', component: CreateComponent },
   { path: 'add-fournisseur', component: AddFournisseurComponent },
   { path: 'liste-fournisseurs', component: ListeFournisseursComponent },
   { path: 'liste-devices', component: ListeDevicesComponent },
+  { path: 'home', component: HomeComponent },
+
 
 ];
 

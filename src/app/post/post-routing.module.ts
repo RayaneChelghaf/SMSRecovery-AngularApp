@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { ListeFournisseursComponent } from '../liste-fournisseurs/liste-fournisseurs.component';
 import { IndexComponent } from './index/index.component';
 
