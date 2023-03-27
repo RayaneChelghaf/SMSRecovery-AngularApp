@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {ProviderService} from "../services/provider.service";
+import {tap} from "rxjs";
 
 @Component({
   selector: 'app-add-fournisseur',
@@ -6,26 +8,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-fournisseur.component.css']
 })
 export class AddFournisseurComponent {
+  public model :ProviderModel = {
+    name : ''
+  }
 
+  constructor(private providerService : ProviderService) {
+
+  }
+
+  addNewModel() {
+
+
+    this.providerService.add(this.model)
+      .pipe(
+        tap(t => this.model.name =  '')
+      )
+      .subscribe();
+  }
 }
 
 
 
-// import { Component } from '@angular/core';
-// import { FournisseurService } from '../services/fournisseur.service';
-
-// @Component({
-// selector: 'app-add-fournisseur',
-// templateUrl: './add-fournisseur.component.html',
-// styleUrls: ['./add-fournisseur.component.css']
-// })
-// export class AddFournisseurComponent {
-// nomFournisseur: string;
-
-// constructor(private fournisseurService: FournisseurService) { }
-
-// submitForm() {
-// this.fournisseurService.addFournisseur(this.nomFournisseur);
-// this.nomFournisseur = '';
-// }
-// }
+export interface ProviderModel {
+  id?: string;
+  name: string;
+}

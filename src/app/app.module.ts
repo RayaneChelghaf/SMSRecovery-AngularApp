@@ -10,6 +10,7 @@ import { PostModule } from './post/post.module'; // Module concernant le CRUD de
 import { AddFournisseurComponent } from './add-fournisseur/add-fournisseur.component';
 import { ListeFournisseursComponent } from './liste-fournisseurs/liste-fournisseurs.component';
 import { ListeDevicesComponent } from './devices/liste-devices.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -18,13 +19,14 @@ import { ListeDevicesComponent } from './devices/liste-devices.component';
     NavbarComponent,
     AddFournisseurComponent,
     ListeFournisseursComponent,
-    ListeDevicesComponent
+    ListeDevicesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     PostModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
