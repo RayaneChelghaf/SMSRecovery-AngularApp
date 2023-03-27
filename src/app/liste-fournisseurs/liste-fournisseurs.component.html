@@ -1,7 +1,30 @@
-<h1>Liste des fournisseurs</h1>
+<!-- <h1>Liste des fournisseurs</h1>
 
 <ul>
   <li>Exemple Fournisseur 1</li>
   <li>Exemple Fournisseur 2</li>
   <li>Exemple Fournisseur 3</li>
-</ul>
+</ul> -->
+
+
+<div class="container">
+  <h1>Liste des fournisseurs</h1>
+
+  <a href="#" routerLink="/message/create/" class="btn btn-success">Ajouter un message</a>
+  
+  <table class="table table-bordered" style="text-align: center;">
+    <tr>
+      <th>IP </th>
+      <th width="220px">Action</th>
+    </tr>
+    <!-- <tr *ngFor="let post of posts">
+      <td>{{ post.id }}</td>
+  
+      <td>
+        <a href="#" [routerLink]="['/message/', post.id, 'view']" class="btn btn-info">View</a>
+        <a href="#" [routerLink]="['/message/', post.id, 'edit']" class="btn btn-primary">Edit</a>
+        <button type="button" (click)="deletePost(post.id)" class="btn btn-danger">Delete</button>
+      </td>
+    </tr> -->
+  </table>
+</div>
