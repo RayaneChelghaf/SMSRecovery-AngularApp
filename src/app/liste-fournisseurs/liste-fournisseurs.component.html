@@ -17,10 +17,13 @@
       <td>{{ items.id }}</td>
       <td>{{ items.name }}</td>
       <td>
-        <a href="#" [routerLink]="['/message/', items.id, 'view']" class="btn btn-info">Voir</a> 
+        <a href="#" [routerLink]="['/liste-fournisseurs/', items.id, 'view']" class="btn btn-info">Voir</a> 
         <!-- changer la route -->
-        <a href="#" [routerLink]="['/message/', items.id, 'edit']" class="btn btn-primary">Éditer</a>
-         <!-- <button type="button" (click)="deletePost(items.id)" class="btn btn-danger">Supprimer</button> -->
+        <a href="#" [routerLink]="['/liste-fournisseurs/', items.id, 'edit']" class="btn btn-primary">Éditer</a>
+        <!-- changer la route -->
+         <button type="button"
+         class="btn btn-danger">Supprimer</button>
+              <!-- (click)="deletePost(items.id)" --> 
       </td>
     </tr>
   </table>
