@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from '../post.service';
+import { PostService } from '../../../fournisseurs/post.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Post } from '../post';
+import { Post } from '../../../fournisseurs/post';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
-     
+
 @Component({
   selector: 'app-edit',
   templateUrl: './edit.component.html',
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
-      
+
   id!: number;
   post!: Post;
   form!: FormGroup;
-    
+
   /*------------------------------------------
   --------------------------------------------
   Created constructor
@@ -25,7 +25,7 @@ export class EditComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router
   ) { }
-    
+
   /**
    * Write code on Method
    *
@@ -35,14 +35,14 @@ export class EditComponent implements OnInit {
     this.id = this.route.snapshot.params['messageId'];
     this.postService.find(this.id).subscribe((data: Post)=>{
       this.post = data;
-    }); 
-      
+    });
+
     this.form = new FormGroup({
       title: new FormControl('', [Validators.required]),
       body: new FormControl('', Validators.required)
     });
   }
-    
+
   /**
    * Write code on Method
    *
@@ -51,7 +51,7 @@ export class EditComponent implements OnInit {
   get f(){
     return this.form.controls;
   }
-    
+
   /**
    * Write code on Method
    *
@@ -64,5 +64,5 @@ export class EditComponent implements OnInit {
          this.router.navigateByUrl('/liste-fournisseurs');
     })
   }
-   
+
 }

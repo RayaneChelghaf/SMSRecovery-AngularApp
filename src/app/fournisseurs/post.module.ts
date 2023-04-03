@@ -4,8 +4,8 @@ import { CommonModule } from '@angular/common';
 import { PostRoutingModule } from './post-routing.module';
 import { IndexComponent } from './index/index.component';
 import { ViewComponent } from '../items/liste-fournisseurs/view/view.component';
-import { CreateComponent } from './create/create.component';
-import { EditComponent } from './edit/edit.component';
+import { CreateComponent } from '../items/liste-fournisseurs/create/create.component';
+import { EditComponent } from '../items/liste-fournisseurs/edit/edit.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
