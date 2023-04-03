@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ListeFournisseursComponent } from '../liste-fournisseurs/liste-fournisseurs.component';
+import { ListeFournisseursComponent } from '../items/liste-fournisseurs/liste-fournisseurs.component';
 import { IndexComponent } from './index/index.component';
 
-import { ViewComponent } from '../liste-fournisseurs/view/view.component';
+import { ViewComponent } from '../items/liste-fournisseurs/view/view.component';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 

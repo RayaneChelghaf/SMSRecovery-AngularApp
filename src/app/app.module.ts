@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PostModule } from './post/post.module'; // Module concernant le CRUD des messages
 import { AddFournisseurComponent } from './add-fournisseur/add-fournisseur.component';
-import { ListeFournisseursComponent } from './liste-fournisseurs/liste-fournisseurs.component';
+import { ListeFournisseursComponent } from './items/liste-fournisseurs/liste-fournisseurs.component';
 import { ListeDevicesComponent } from './devices/liste-devices.component';
 import {FormsModule} from "@angular/forms";
 

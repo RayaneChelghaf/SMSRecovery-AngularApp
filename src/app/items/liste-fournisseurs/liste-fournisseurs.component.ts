@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ProviderService} from "../services/provider.service";
-import {ProviderModel} from "../add-fournisseur/add-fournisseur.component";
+import {ProviderService} from "../../services/provider.service";
+import {ProviderModel} from "../../add-fournisseur/add-fournisseur.component";
 import {tap} from "rxjs";
 
 @Component({
@@ -33,16 +33,16 @@ export class ListeFournisseursComponent implements OnInit{
 
 
 // export class IndexComponent implements OnInit {
-      
+
 //   posts: Post[] = [];
-    
+
 //   /*------------------------------------------
 //   --------------------------------------------
 //   Created constructor
 //   --------------------------------------------
 //   --------------------------------------------*/
 //   constructor(public postService: PostService) { }
-    
+
 //   /**
 //    * Write code on Method
 //    *
@@ -52,9 +52,9 @@ export class ListeFournisseursComponent implements OnInit{
 //     this.postService.getAll().subscribe((data: Post[])=>{
 //       this.posts = data;
 //       console.log(this.posts);
-//     })  
+//     })
 //   }
-    
+
 //   /**
 //    * Write code on Method
 //    *
@@ -66,5 +66,5 @@ export class ListeFournisseursComponent implements OnInit{
 //          console.log('Post deleted successfully!');
 //     })
 //   }
-    
+
 // }
