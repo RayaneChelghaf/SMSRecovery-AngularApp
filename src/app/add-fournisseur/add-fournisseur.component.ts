@@ -9,7 +9,9 @@ import {tap} from "rxjs";
 })
 export class AddFournisseurComponent {
   public model :ProviderModel = {
-    name : ''
+    name : '',
+    device : ''
+
   }
 
   constructor(private providerService : ProviderService) {
@@ -32,4 +34,6 @@ export class AddFournisseurComponent {
 export interface ProviderModel {
   id?: string;
   name: string;
+  device: string;
+
 }

@@ -1,0 +1,32 @@
+<div class="container">
+  <h1>Index des fournisseurs</h1>
+
+  <a href="#" routerLink="/add-fournisseur/" class="btn btn-success">Ajouter un fournisseur</a>
+
+  <br>
+
+  <p *ngIf="items === null">Chargement en cours... </p>
+
+  <table *ngIf="items" class="table table-bordered" style="text-align: center;">
+    <tr>
+      <th>IP </th>
+      <th>Nom </th>
+      <th width="220px">Action</th>
+    </tr>
+    <tr *ngFor="let items of items">
+      <td>{{ items.id }}</td>
+      <td>{{ items.name }}</td>
+      <td>
+        <a href="#" [routerLink]="['/liste-fournisseurs/', items.id, 'view']" class="btn btn-info">Voir</a> 
+        <!-- faire fonctionner la route -->
+        <a href="#" [routerLink]="['/liste-fournisseurs/', items.id, 'edit']" class="btn btn-primary">Éditer</a>
+        <!-- faire fonctionner la route -->
+         <button type="button"
+         class="btn btn-danger">Supprimer</button>
+              <!-- (click)="deletePost(items.id)" --> 
+                       <!-- <button type="button" (click)="deletePost(items.id)" class="btn btn-danger">Supprimer</button> -->
+
+      </td>
+    </tr>
+  </table>
+</div>

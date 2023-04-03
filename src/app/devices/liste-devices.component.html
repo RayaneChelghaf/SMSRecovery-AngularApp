@@ -1,13 +1,23 @@
 <div class="container">
     <h1>Liste des devices</h1>
   
-    
-    <table class="table table-bordered" style="text-align: center;">
+
+    <table *ngIf="items" class="table table-bordered" style="text-align: center;">
       <tr>
         <th>Fournisseur </th>
         <th>Nom Device </th>
         <th>Libellé </th>
+        <th width="220px">Action</th>
       </tr>
-
+      <tr *ngFor="let items of items">
+        <td>{{ items.name }}</td>
+        <td>{{ items.device }}</td>
+        <td>{{ items.id }}</td>
+        <td>
+        
+          <a href="#" [routerLink]="['/liste-fournisseurs/', items.id, 'view']" class="btn btn-info">Voir</a> 
+         
+        </td>
+      </tr>
     </table>
  </div>
