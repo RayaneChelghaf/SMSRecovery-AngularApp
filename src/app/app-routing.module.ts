@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'add-fournisseur', component: AddFournisseurComponent },
   { path: 'liste-fournisseurs', component: ListeFournisseursComponent },
   { path: 'liste-devices', component: ListeDevicesComponent },
+  // routage à mettre à jour
 ];
 
 @NgModule({
