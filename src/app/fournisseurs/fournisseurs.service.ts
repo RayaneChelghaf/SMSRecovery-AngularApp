@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-     
+
 import {  Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-  
-import { Post } from './post';
-  
+
+import { ProviderModel } from './items';
+
 @Injectable({
   providedIn: 'root'
 })
-export class PostService {
-  
+export class FournisseursService {
+
   private apiURL = "https://jsonplaceholder.typicode.com";
-    
+
   /*------------------------------------------
   --------------------------------------------
   Http Header Options
@@ -23,84 +23,84 @@ export class PostService {
       'Content-Type': 'application/json'
     })
   }
-   
+
   /*------------------------------------------
   --------------------------------------------
   Created constructor
   --------------------------------------------
   --------------------------------------------*/
   constructor(private httpClient: HttpClient) { }
-    
+
   /**
    * Write code on Method
    *
    * @return response()
    */
   getAll(): Observable<any> {
-  
-    return this.httpClient.get(this.apiURL + '/posts/')
-  
+
+    return this.httpClient.get(this.apiURL + '/items/')
+
     .pipe(
       catchError(this.errorHandler)
     )
   }
-    
+
   /**
    * Write code on Method
    *
    * @return response()
    */
-  create(post:Post): Observable<any> {
-  
-    return this.httpClient.post(this.apiURL + '/posts/', JSON.stringify(post), this.httpOptions)
-  
+  create(post:ProviderModel): Observable<any> {
+
+    return this.httpClient.post(this.apiURL + '/items/', JSON.stringify(post), this.httpOptions)
+
     .pipe(
       catchError(this.errorHandler)
     )
-  }  
-    
+  }
+
   /**
    * Write code on Method
    *
    * @return response()
    */
   find(id:number): Observable<any> {
-  
-    return this.httpClient.get(this.apiURL + '/posts/' + id)
-  
+
+    return this.httpClient.get(this.apiURL + '/items/' + id)
+
     .pipe(
       catchError(this.errorHandler)
     )
   }
-    
+
   /**
    * Write code on Method
    *
    * @return response()
    */
-  update(id:number, post:Post): Observable<any> {
-  
-    return this.httpClient.put(this.apiURL + '/posts/' + id, JSON.stringify(post), this.httpOptions)
- 
-    .pipe( 
+  update(id:number, post:ProviderModel): Observable<any> {
+
+    return this.httpClient.put(this.apiURL + '/items/' + id, JSON.stringify(post), this.httpOptions)
+
+    .pipe(
       catchError(this.errorHandler)
     )
   }
-       
+
   /**
    * Write code on Method
    *
    * @return response()
    */
   delete(id:number){
-    return this.httpClient.delete(this.apiURL + '/posts/' + id, this.httpOptions)
-  
+    return this.httpClient.delete(this.apiURL + '/items/' + id, this.httpOptions)
+
     .pipe(
       catchError(this.errorHandler)
     )
   }
-      
-  /** 
+
+  /**
    * Write code on Method
    *
    * @return response()

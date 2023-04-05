@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../../../post/post.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Post } from '../../../post/post';
+import { ProviderModel } from '../../../../app/fournisseurs/items';
     
 @Component({
   selector: 'app-view',
@@ -11,7 +11,7 @@ import { Post } from '../../../post/post';
 export class ViewComponent implements OnInit {
      
   id!: number;
-  post!: Post;
+  items!: ProviderModel;
     
   /*------------------------------------------
   --------------------------------------------
@@ -32,8 +32,8 @@ export class ViewComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params['fournisseurId'];
         
-    this.postService.find(this.id).subscribe((data: Post)=>{
-      this.post = data;
+    this.postService.find(this.id).subscribe((data: ProviderModel)=>{
+      this.items = data;
     });
   }
     

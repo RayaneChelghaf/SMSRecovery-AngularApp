@@ -41,7 +41,7 @@ export class ListeFournisseursComponent implements OnInit{
 //   Created constructor
 //   --------------------------------------------
 //   --------------------------------------------*/
-//   constructor(public postService: PostService) { }
+//   constructor(public postService: FournisseursService) { }
 
 //   /**
 //    * Write code on Method

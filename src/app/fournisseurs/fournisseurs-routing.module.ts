@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ListeFournisseursComponent } from '../items/liste-fournisseurs/liste-fournisseurs.component';
+// import { ListeFournisseursComponent } from '../items/liste-fournisseurs/liste-fournisseurs.component';
 // import { IndexComponent } from './index/index.component';
 
 import { ViewComponent } from '../items/liste-fournisseurs/view/view.component';
-import { CreateComponent } from '../items/liste-fournisseurs/create/create.component';
+// import { CreateComponent } from '../items/liste-fournisseurs/create/create.component';
 import { EditComponent } from '../items/liste-fournisseurs/edit/edit.component';
 
 const routes: Routes = [
@@ -14,11 +14,11 @@ const routes: Routes = [
   // { path: 'message/liste-fournisseurs', component: ListeFournisseursComponent },
 
   { path: 'liste-fournisseurs/:fournisseurId/view', component: ViewComponent },
-  { path: 'liste-fournisseurs/create', component: CreateComponent },
+  // { path: 'liste-fournisseurs/create', component: CreateComponent },
   { path: 'liste-fournisseurs/:fournisseurId/edit', component: EditComponent }
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PostRoutingModule { }
+export class FournisseursRoutingModule { }

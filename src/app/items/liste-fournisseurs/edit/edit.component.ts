@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from '../../../fournisseurs/post.service';
+import { FournisseursService } from '../../../fournisseurs/fournisseurs.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Post } from '../../../fournisseurs/post';
+import { ProviderModel } from '../../../../app/fournisseurs/items';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({
@@ -12,8 +12,8 @@ import { FormGroup, FormControl, Validators} from '@angular/forms';
 export class EditComponent implements OnInit {
 
   id!: number;
-  name!: Post;
-  device!: FormGroup;
+  items!: ProviderModel;
+  form!: FormGroup;
 
   /*------------------------------------------
   --------------------------------------------
@@ -21,7 +21,7 @@ export class EditComponent implements OnInit {
   --------------------------------------------
   --------------------------------------------*/
   constructor(
-    public postService: PostService,
+    public postService: FournisseursService,
     private route: ActivatedRoute,
     private router: Router
   ) { }
@@ -33,11 +33,11 @@ export class EditComponent implements OnInit {
    */
   ngOnInit(): void {
     this.id = this.route.snapshot.params['fournisseurId'];
-    this.postService.find(this.id).subscribe((data: Post)=>{
-      this.name = data;
+    this.postService.find(this.id).subscribe((data: ProviderModel)=>{
+      this.items = data;
     });
 
-    this.device = new FormGroup({
+    this.form = new FormGroup({
       title: new FormControl('', [Validators.required]),
       body: new FormControl('', Validators.required)
     });
@@ -49,7 +49,7 @@ export class EditComponent implements OnInit {
    * @return response()
    */
   get f(){
-    return this.device.controls;
+    return this.form.controls;
   }
 
   /**
@@ -58,8 +58,8 @@ export class EditComponent implements OnInit {
    * @return response()
    */
   submit(){
-    console.log(this.device.value);
-    this.postService.update(this.id, this.device.value).subscribe((res:any) => {
+    console.log(this.form.value);
+    this.postService.update(this.id, this.form.value).subscribe((res:any) => {
          console.log('Post updated successfully!');
          this.router.navigateByUrl('/liste-fournisseurs');
     })
