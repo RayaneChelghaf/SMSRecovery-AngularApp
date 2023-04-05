@@ -1,39 +1,39 @@
 <div class="container" *ngIf="item">
     <h1>Éditer le fournisseur</h1>
-
+  
     <a href="#" routerLink="/liste-fournisseurs" class="btn btn-primary">Retour</a>
+  
+    <br>
+  
+
+    <div style="text-align: center;">
+        <strong> Nom :</strong>
+        <p class="form-control">[(ngModel)]="item.name"</p>
+    </div>
 
     <br>
+  
 
-    <div class="row">
-        <div class="col-md-6">
-            Nom
-        </div>
-        <div class="col-md-6">
-            <input class="form-control" [(ngModel)]="item.name">
-        </div>
+    <div style="text-align: center;">
+        <strong> Device :</strong>
+        <p class="form-control">[(ngModel)]="item.device"</p>
     </div>
 
-    <div class="row">
-        <div class="col-md-6">
-            Device
-        </div>
-        <div class="col-md-6">
-            <input class="form-control" [(ngModel)]="item.device">
-        </div>
-    </div>
+  
+    <br>
 
-    <div class="row">
-        <div class="col-md-6">
-            &nbsp;
-        </div>
-        <div class="col-md-6">
-            <button class="btn btn-primary" (click)="submit()">Enregistrer</button>
-        </div>
-    </div>
+ 
 
-</div>
+    <div style="text-align: center;">
+        <button class="btn btn-primary" (click)="submit()">Enregistrer</button>
+      </div>
 
-<p *ngIf="!item">
-  Chargement en cours ...
-</p>
+      <br>
+
+  
+  <p *ngIf="!item">
+    Chargement en cours ...
+  </p>
+  
+
+
