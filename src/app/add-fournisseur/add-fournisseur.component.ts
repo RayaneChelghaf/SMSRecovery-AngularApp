@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {ProviderService} from "../services/provider.service";
 import {tap} from "rxjs";
+import { ProviderModel } from '../fournisseurs/items';
 
 @Component({
   selector: 'app-add-fournisseur',
@@ -31,9 +32,11 @@ export class AddFournisseurComponent {
 
 
 
-export interface ProviderModel {
-  id?: string;
-  name: string;
-  device: string;
 
-}
+export { ProviderModel };
+// export interface ProviderModel {
+//   id?: string;
+//   name: string;
+//   device: string;
+
+// }
