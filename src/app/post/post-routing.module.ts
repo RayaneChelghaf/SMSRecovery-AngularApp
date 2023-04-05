@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ListeFournisseursComponent } from '../items/liste-fournisseurs/view/liste-fournisseurs.component';
+import { ListeFournisseursComponent } from '../items/liste-fournisseurs/index/liste-fournisseurs.component';
 import { IndexComponent } from './index/index.component';
 
 import { ViewComponent } from './view/view.component';

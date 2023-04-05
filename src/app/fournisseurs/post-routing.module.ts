@@ -13,9 +13,9 @@ const routes: Routes = [
   // { path: 'liste-fournisseurs/index', component: IndexComponent },
   // { path: 'message/liste-fournisseurs', component: ListeFournisseursComponent },
 
-  { path: 'liste-fournisseurs/:messageId/view', component: ViewComponent },
+  { path: 'liste-fournisseurs/:fournisseurId/view', component: ViewComponent },
   { path: 'liste-fournisseurs/create', component: CreateComponent },
-  { path: 'liste-fournisseurs/:messageId/edit', component: EditComponent }
+  { path: 'liste-fournisseurs/:fournisseurId/edit', component: EditComponent }
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],

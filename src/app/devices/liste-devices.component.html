@@ -1,6 +1,7 @@
 <div class="container">
     <h1>Liste des devices</h1>
   
+    <p style="text-align: center;" *ngIf="items === null">Chargement en cours... </p>
 
     <table *ngIf="items" class="table table-bordered" style="text-align: center;">
       <tr>

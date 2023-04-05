@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../post.service';
+import {ProviderModel} from "../../add-fournisseur/add-fournisseur.component";
+import {ProviderService} from "../../services/provider.service";
 import { Post } from '../post';
       
 @Component({
@@ -7,8 +9,20 @@ import { Post } from '../post';
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.css']
 })
+
+
+
+
+
+
+
+
 export class IndexComponent implements OnInit {
       
+
+  public items : ProviderModel[] | null = null;
+
+
   posts: Post[] = [];
     
   /*------------------------------------------
