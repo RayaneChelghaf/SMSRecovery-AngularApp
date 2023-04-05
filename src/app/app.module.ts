@@ -11,6 +11,8 @@ import { AddFournisseurComponent } from './add-fournisseur/add-fournisseur.compo
 import { ListeFournisseursComponent } from './items/liste-fournisseurs/index/liste-fournisseurs.component';
 import { ListeDevicesComponent } from './devices/liste-devices.component';
 import {FormsModule} from "@angular/forms";
+import {CommonModule} from "@angular/common";
+import {ViewComponent} from "./items/liste-fournisseurs/view/view.component";
 
 
 @NgModule({
@@ -20,8 +22,10 @@ import {FormsModule} from "@angular/forms";
     AddFournisseurComponent,
     ListeFournisseursComponent,
     ListeDevicesComponent,
+    ViewComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     PostModule,
