@@ -32,7 +32,7 @@ export class CreateComponent implements OnInit {
    * @return response()
    */
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['messageId'];
+    this.id = this.route.snapshot.params['fournisseurId'];
     this.postService.find(this.id).subscribe((data: Post)=>{
       this.post = data;
     });
