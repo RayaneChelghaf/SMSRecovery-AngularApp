@@ -11,7 +11,7 @@ import { ProviderModel } from './items';
 })
 export class FournisseursService {
 
-  private apiURL = "https://jsonplaceholder.typicode.com";
+  private apiURL = "";
 
   /*------------------------------------------
   --------------------------------------------
@@ -114,4 +114,10 @@ export class FournisseursService {
     }
     return throwError(errorMessage);
  }
+
+  get(id: number) : Observable<ProviderModel> {
+
+    return this.httpClient.get<ProviderModel>(`${this.apiURL}/api/provider/${id}`, this.httpOptions)
+
+  }
 }
