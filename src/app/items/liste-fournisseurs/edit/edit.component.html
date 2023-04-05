@@ -4,7 +4,6 @@
     <a href="#" routerLink="/liste-fournisseurs" class="btn btn-primary">Retour</a>
   
     <br>
-  
 
     <div style="text-align: center;">
         <strong> Nom :</strong>
@@ -12,28 +11,20 @@
     </div>
 
     <br>
-  
 
     <div style="text-align: center;">
         <strong> Device :</strong>
         <p class="form-control">[(ngModel)]="item.device"</p>
     </div>
-
   
     <br>
-
- 
 
     <div style="text-align: center;">
         <button class="btn btn-primary" (click)="submit()">Enregistrer</button>
       </div>
 
       <br>
-
   
   <p *ngIf="!item">
     Chargement en cours ...
   </p>
-  
-
-
