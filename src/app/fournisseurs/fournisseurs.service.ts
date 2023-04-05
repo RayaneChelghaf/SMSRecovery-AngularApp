@@ -64,27 +64,9 @@ export class FournisseursService {
    *
    * @return response()
    */
-  find(id:number): Observable<any> {
+  update(id:string, post:ProviderModel): Observable<any> {
 
-    return this.httpClient.get(this.apiURL + '/items/' + id)
-
-    .pipe(
-      catchError(this.errorHandler)
-    )
-  }
-
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
-  update(id:number, post:ProviderModel): Observable<any> {
-
-    return this.httpClient.put(this.apiURL + '/items/' + id, JSON.stringify(post), this.httpOptions)
-
-    .pipe(
-      catchError(this.errorHandler)
-    )
+    return this.httpClient.put(this.apiURL + '/api/provider/' + id, post, this.httpOptions) .pipe(catchError(this.errorHandler));
   }
 
   /**

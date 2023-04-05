@@ -1,0 +1,25 @@
+<div class="container" *ngIf="item">
+    <h1>Afficher le device</h1>
+
+    <a href="#" routerLink="/liste-devices" class="btn btn-primary">Retour</a>
+
+
+    <br>
+
+    <div style="text-align: center;">
+        <strong>IP :</strong>
+        <p *ngIf="item">{{ item.id }}</p>
+    </div>
+
+    <br>
+
+    <div style="text-align: center;">
+        <strong>Nom :</strong>
+        <p *ngIf="item">{{ item.name }}</p>
+    </div>
+
+</div>
+
+<p *ngIf="!item">
+    Chargement de l'élément en cours ...
+</p>

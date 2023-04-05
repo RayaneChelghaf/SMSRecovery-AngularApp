@@ -11,9 +11,7 @@ import { FormGroup, FormControl, Validators} from '@angular/forms';
 })
 export class EditComponent implements OnInit {
 
-  id!: number;
-  items!: ProviderModel;
-  form!: FormGroup;
+  public item: ProviderModel | null = null;
 
   /*------------------------------------------
   --------------------------------------------
@@ -21,7 +19,7 @@ export class EditComponent implements OnInit {
   --------------------------------------------
   --------------------------------------------*/
   constructor(
-    public postService: FournisseursService,
+    public fournisseursService: FournisseursService,
     private route: ActivatedRoute,
     private router: Router
   ) { }
@@ -32,24 +30,13 @@ export class EditComponent implements OnInit {
    * @return response()
    */
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['fournisseurId'];
-    this.postService.find(this.id).subscribe((data: ProviderModel)=>{
-      this.items = data;
-    });
+    const id = this.route.snapshot.params['fournisseurId'];
 
-    this.form = new FormGroup({
-      title: new FormControl('', [Validators.required]),
-      body: new FormControl('', Validators.required)
-    });
-  }
-
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
-  get f(){
-    return this.form.controls;
+    if (id) {
+      this.fournisseursService.get(id).subscribe((data: ProviderModel)=>{
+        this.item = data;
+      });
+    }
   }
 
   /**
@@ -58,11 +45,20 @@ export class EditComponent implements OnInit {
    * @return response()
    */
   submit(){
-    console.log(this.form.value);
-    this.postService.update(this.id, this.form.value).subscribe((res:any) => {
-         console.log('Post updated successfully!');
-         this.router.navigateByUrl('/liste-fournisseurs');
-    })
+    if (!this.item?.device || !this.item?.name) {
+
+      // Mettre en place de meilleure validation
+        return ; 
+    }
+
+
+      this.fournisseursService.update(this.item.id ?? '', this.item)
+      .subscribe((res:any) => {
+        console.log('Post updated successfully!');
+        this.router.navigateByUrl('/liste-fournisseurs');
+   });
+   
+
   }
 
 }

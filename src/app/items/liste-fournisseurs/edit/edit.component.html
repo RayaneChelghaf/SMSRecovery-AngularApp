@@ -1,43 +1,39 @@
-<div class="container">
+<div class="container" *ngIf="item">
     <h1>Éditer le fournisseur</h1>
 
     <a href="#" routerLink="/liste-fournisseurs" class="btn btn-primary">Retour</a>
 
     <br>
 
-    <form [formGroup]="form" (ngSubmit)="submit()">
-
-        <div class="form-group">
-            <label for="title">IP:</label>
-            <input
-                formControlName="title"
-                id="title"
-                type="text"
-                [(ngModel)]="items.id"
-                class="form-control">
-            <div *ngIf="f['title'].touched && f['title'].invalid" class="alert alert-danger">
-                <div *ngIf="f['title'].errors && f['title'].errors['required']">IP Requise.</div>
-            </div>
+    <div class="row">
+        <div class="col-md-6">
+            Nom
         </div>
-
-        <br>
-
-        <div class="form-group">
-            <label for="body">Nom :</label>
-            <textarea
-                formControlName="body"
-                id="body"
-                type="text"
-                [(ngModel)]="items.name"
-                class="form-control">
-            </textarea>
-            <div *ngIf="f['body'].touched && f['body'].invalid" class="alert alert-danger">
-                <div *ngIf="f['body'].errors && f['body'].errors['required']">Nom requis.</div>
-            </div>
+        <div class="col-md-6">
+            <input class="form-control" [(ngModel)]="item.name">
         </div>
+    </div>
 
-        <br>
+    <div class="row">
+        <div class="col-md-6">
+            Device
+        </div>
+        <div class="col-md-6">
+            <input class="form-control" [(ngModel)]="item.device">
+        </div>
+    </div>
 
-        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Mettre à jour</button>
-    </form>
+    <div class="row">
+        <div class="col-md-6">
+            &nbsp;
+        </div>
+        <div class="col-md-6">
+            <button class="btn btn-primary" (click)="submit()">Enregistrer</button>
+        </div>
+    </div>
+
 </div>
+
+<p *ngIf="!item">
+  Chargement en cours ...
+</p>
