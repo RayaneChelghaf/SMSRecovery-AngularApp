@@ -4,51 +4,33 @@
   align-items: center;
 }
 
-
-
 h1 {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 2rem;
-  padding-top: 70px; /* Ajout de padding-top pour pousser l'élément sous la navbar */
-
+  padding-top: 70px;
 }
 
-.btn-success {
-
-  padding: 0.5rem 1rem;
+.btn-primary {
+  padding: 0.5rem 1.5rem;
   border-radius: 5px;
   border: none;
-  background-color: #407900;
+  background-color: #0d6efd;
   color: #fff;
   font-size: 1.2rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.btn-success:hover {
-  background-color: #1f1f1f;
+.btn-primary:hover {
+  background-color: #0a58ca;
 }
 
-
-
-/* .btn-success {
-  padding: 0.5rem 1rem !important;
+.form-control {
+  display: inline-block;
   border-radius: 5px;
-  border: none;
-  margin: 100px;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  background-color: #407900;
-  color: #fff;
+  border: 1px solid #ced4da;
+  padding: 0.5rem;
+  width: 100%;
   font-size: 1.2rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
-
-.btn-success[type="submit"]:hover {
-  background-color: #1f1f1f;
-} */
