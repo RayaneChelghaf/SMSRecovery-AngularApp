@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container" *ngIf="item">
     <h1>Afficher le fournisseur</h1>
-  
+
     <a href="#" routerLink="/liste-fournisseurs" class="btn btn-primary">Retour</a>
 
 
@@ -8,14 +8,18 @@
 
     <div style="text-align: center;">
         <strong>IP :</strong>
-        <p>{{ items.id }}</p>
+        <p *ngIf="item">{{ item.id }}</p>
     </div>
-   
+
     <br>
 
     <div style="text-align: center;">
         <strong>Nom :</strong>
-        <p>{{ items.name }}</p>
+        <p *ngIf="item">{{ item.name }}</p>
     </div>
-   
+
 </div>
+
+<p *ngIf="!item">
+    Chargement de l'élément en cours ...
+</p>
