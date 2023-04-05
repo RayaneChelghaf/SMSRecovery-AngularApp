@@ -12,8 +12,8 @@ import { FormGroup, FormControl, Validators} from '@angular/forms';
 export class EditComponent implements OnInit {
 
   id!: number;
-  post!: Post;
-  form!: FormGroup;
+  name!: Post;
+  device!: FormGroup;
 
   /*------------------------------------------
   --------------------------------------------
@@ -32,12 +32,12 @@ export class EditComponent implements OnInit {
    * @return response()
    */
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['messageId'];
+    this.id = this.route.snapshot.params['fournisseurId'];
     this.postService.find(this.id).subscribe((data: Post)=>{
-      this.post = data;
+      this.name = data;
     });
 
-    this.form = new FormGroup({
+    this.device = new FormGroup({
       title: new FormControl('', [Validators.required]),
       body: new FormControl('', Validators.required)
     });
@@ -49,7 +49,7 @@ export class EditComponent implements OnInit {
    * @return response()
    */
   get f(){
-    return this.form.controls;
+    return this.device.controls;
   }
 
   /**
@@ -58,8 +58,8 @@ export class EditComponent implements OnInit {
    * @return response()
    */
   submit(){
-    console.log(this.form.value);
-    this.postService.update(this.id, this.form.value).subscribe((res:any) => {
+    console.log(this.device.value);
+    this.postService.update(this.id, this.device.value).subscribe((res:any) => {
          console.log('Post updated successfully!');
          this.router.navigateByUrl('/liste-fournisseurs');
     })
