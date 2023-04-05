@@ -8,9 +8,10 @@ import { CreateComponent } from '../items/liste-fournisseurs/create/create.compo
 import { EditComponent } from '../items/liste-fournisseurs/edit/edit.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ListeFournisseursPostComponent } from './liste-fournisseurs-post/liste-fournisseurs-post.component';
 
 @NgModule({
-  declarations: [IndexComponent, ViewComponent, CreateComponent, EditComponent],
+  declarations: [IndexComponent, ViewComponent, CreateComponent, EditComponent, ListeFournisseursPostComponent],
   imports: [
     CommonModule,
     PostRoutingModule,
