@@ -13,6 +13,7 @@ import { ListeDevicesComponent } from './devices/liste-devices.component';
 import {FormsModule} from "@angular/forms";
 import {CommonModule} from "@angular/common";
 import {ViewComponent} from "./items/liste-fournisseurs/view/view.component";
+import {EditComponent} from "./items/liste-fournisseurs/edit/edit.component";
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {ViewComponent} from "./items/liste-fournisseurs/view/view.component";
     AddFournisseurComponent,
     ListeFournisseursComponent,
     ListeDevicesComponent,
-    ViewComponent
+    ViewComponent,
+    EditComponent
   ],
   imports: [
     CommonModule,
