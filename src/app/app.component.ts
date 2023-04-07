@@ -11,4 +11,3 @@ import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/fo
 export class AppComponent {
   title = 'SMSRecovery-AngularApp';
 }
-
