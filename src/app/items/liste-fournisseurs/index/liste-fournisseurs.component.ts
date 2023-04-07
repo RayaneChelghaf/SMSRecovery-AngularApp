@@ -28,4 +28,13 @@ export class ListeFournisseursComponent implements OnInit{
 
   }
 
+  // onDelete(id: number): void {
+  //   if (confirm('Êtes-vous sûr de vouloir supprimer ce fournisseur?')) {
+  //     this.fournisseurService.deleteFournisseur(id).subscribe(() => {
+  //       this.items = this.items.filter(fournisseur => item.id !== id);
+  //     });
+  //   }
+  // }
+  
+
 }
