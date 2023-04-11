@@ -10,11 +10,17 @@ import { PostModule } from './post/post.module'; // Module concernant le CRUD de
 import { AddFournisseurComponent } from './add-fournisseur/add-fournisseur.component';
 import { ListeFournisseursComponent } from './items/liste-fournisseurs/index/liste-fournisseurs.component';
 import { ListeDevicesComponent } from './devices/liste-devices.component';
-import {FormsModule} from "@angular/forms";
-import {CommonModule} from "@angular/common";
-import {ViewComponent} from "./items/liste-fournisseurs/view/view.component";
-import {EditComponent} from "./items/liste-fournisseurs/edit/edit.component";
+import { FormsModule } from "@angular/forms";
+import { CommonModule } from "@angular/common";
+import { ViewComponent } from "./items/liste-fournisseurs/view/view.component";
+import { EditComponent } from "./items/liste-fournisseurs/edit/edit.component";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -32,7 +38,15 @@ import {EditComponent} from "./items/liste-fournisseurs/edit/edit.component";
     AppRoutingModule,
     PostModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+
+    // Angular Material modules
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
