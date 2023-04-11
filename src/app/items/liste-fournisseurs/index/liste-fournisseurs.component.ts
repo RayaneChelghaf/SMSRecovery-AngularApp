@@ -36,5 +36,4 @@ export class ListeFournisseursComponent implements OnInit{
   //   }
   // }
   
-
 }
