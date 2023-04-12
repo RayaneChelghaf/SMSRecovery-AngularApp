@@ -9,7 +9,7 @@ import {FournisseursService} from "../../fournisseurs/fournisseurs.service";
   templateUrl: './view.component.html',
   styleUrls: ['./view.component.css']
 })
-export class ViewComponent implements OnInit {
+export class ViewDeviceComponent implements OnInit {
 
   public id: number | null = null;
   public item: ProviderModel | null = null;

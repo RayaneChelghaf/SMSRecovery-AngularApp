@@ -28,43 +28,12 @@ export class ListeFournisseursComponent implements OnInit{
 
   }
 
+  // onDelete(id: number): void {
+  //   if (confirm('Êtes-vous sûr de vouloir supprimer ce fournisseur?')) {
+  //     this.fournisseurService.deleteFournisseur(id).subscribe(() => {
+  //       this.items = this.items.filter(fournisseur => item.id !== id);
+  //     });
+  //   }
+  // }
+  
 }
-
-
-
-// export class IndexComponent implements OnInit {
-
-//   posts: Post[] = [];
-
-//   /*------------------------------------------
-//   --------------------------------------------
-//   Created constructor
-//   --------------------------------------------
-//   --------------------------------------------*/
-//   constructor(public postService: FournisseursService) { }
-
-//   /**
-//    * Write code on Method
-//    *
-//    * @return response()
-//    */
-//   ngOnInit(): void {
-//     this.postService.getAll().subscribe((data: Post[])=>{
-//       this.posts = data;
-//       console.log(this.posts);
-//     })
-//   }
-
-//   /**
-//    * Write code on Method
-//    *
-//    * @return response()
-//    */
-//   deletePost(id:number){
-//     this.postService.delete(id).subscribe(res => {
-//          this.posts = this.posts.filter(item => item.id !== id);
-//          console.log('Post deleted successfully!');
-//     })
-//   }
-
-// }

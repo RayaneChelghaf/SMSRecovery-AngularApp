@@ -8,6 +8,9 @@ import { ListeDevicesComponent } from './devices/liste-devices.component';
 import {ViewComponent} from "./items/liste-fournisseurs/view/view.component";
 import {EditComponent} from "./items/liste-fournisseurs/edit/edit.component";
 
+import {ViewDeviceComponent} from "./devices/view/view.component";
+
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
@@ -16,7 +19,7 @@ const routes: Routes = [
   { path: 'liste-fournisseurs/:fournisseurId/edit', component: EditComponent , pathMatch: 'full'},
   { path: 'liste-fournisseurs', component: ListeFournisseursComponent },
   { path: 'liste-devices', component: ListeDevicesComponent },
-  { path: 'liste-devices/:deviceId/view', component: ViewComponent , pathMatch: 'full'},
+  { path: 'liste-devices/:deviceId/view', component: ViewDeviceComponent , pathMatch: 'full'},
 ];
 
 @NgModule({
