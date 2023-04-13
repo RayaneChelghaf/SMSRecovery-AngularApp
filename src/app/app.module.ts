@@ -30,7 +30,8 @@ import { MatInputModule } from '@angular/material/input';
     ListeFournisseursComponent,
     ListeDevicesComponent,
     ViewComponent,
-    EditComponent
+    EditComponent,
+    ViewDeviceComponent
   ],
   imports: [
     CommonModule,
