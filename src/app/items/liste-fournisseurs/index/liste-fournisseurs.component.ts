@@ -16,8 +16,9 @@ export class ListeFournisseursComponent implements OnInit{
   public items : ProviderModel[] | null = null;
 
   constructor(
-    private provider : ProviderService,
-    private dialog: MatDialog
+    private provider : ProviderService
+    // ,
+    // private dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -49,25 +50,29 @@ export class ListeFournisseursComponent implements OnInit{
   //   }
   //   }
 
-  onView(provider: ProviderModel): void {
-    const dialogRef = this.dialog.open(ViewComponent, {
-      width: '400px',
-      data: provider
-    });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
-  }
 
-  onEdit(provider: ProviderModel): void {
-    const dialogRef = this.dialog.open(EditComponent, {
-      width: '400px',
-      data: provider
-    });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
-  }
+  // onView(provider: ProviderModel): void {
+  //   const dialogRef = this.dialog.open(ViewComponent, {
+  //     width: '400px',
+  //     data: provider
+  //   });
+
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     console.log('The dialog was closed');
+  //   });
+  // }
+
+  // onEdit(provider: ProviderModel): void {
+  //   const dialogRef = this.dialog.open(EditComponent, {
+  //     width: '400px',
+  //     data: provider
+  //   });
+
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     console.log('The dialog was closed');
+  //   });
+  // }
+
 }
