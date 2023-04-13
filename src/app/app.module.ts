@@ -15,6 +15,8 @@ import {CommonModule} from "@angular/common";
 import {ViewComponent} from "./items/liste-fournisseurs/view/view.component";
 import {EditComponent} from "./items/liste-fournisseurs/edit/edit.component";
 
+import {ViewDeviceComponent} from "./devices/view/view.component";
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import {EditComponent} from "./items/liste-fournisseurs/edit/edit.component";
     ListeFournisseursComponent,
     ListeDevicesComponent,
     ViewComponent,
-    EditComponent
+    EditComponent,
+    ViewDeviceComponent
   ],
   imports: [
     CommonModule,

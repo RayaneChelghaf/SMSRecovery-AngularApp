@@ -11,3 +11,17 @@ import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/fo
 export class AppComponent {
   title = 'SMSRecovery-AngularApp';
 }
+
+//   confirmCancelDialog() {
+//     this.dialog
+//       .confirmDialog({
+//         title: 'Confirm Action',
+//         message: 'Do you want to confirm this action?',
+//         confirmCaption: 'Confirm',
+//         cancelCaption: 'Cancel',
+//       })
+//       .subscribe((confirmed) => {
+//         if (confirmed) console.log('The user confirmed the action');
+//       });
+//   }
+// }
