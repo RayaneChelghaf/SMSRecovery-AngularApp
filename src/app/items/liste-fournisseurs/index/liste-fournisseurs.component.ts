@@ -32,22 +32,22 @@ export class ListeFournisseursComponent implements OnInit{
 
   }
 
-  onDelete(id: number): void {
-    if (confirm('Êtes-vous sûr de vouloir supprimer ce fournisseur?')) {
-      this.provider.deleteProvider(id.toString()).subscribe(() => {
-        // this.items = (this.items ?? []).filter((item: ProviderModel) => item.id !== id);
-        this.items = (this.items ?? []).filter((item: ProviderModel) => item.id !== parseInt(id!, 10));
+  // onDelete(id: number): void {
+  //   if (confirm('Êtes-vous sûr de vouloir supprimer ce fournisseur?')) {
+  //     this.provider.deleteProvider(id.toString()).subscribe(() => {
+  //       // this.items = (this.items ?? []).filter((item: ProviderModel) => item.id !== id);
+  //       this.items = (this.items ?? []).filter((item: ProviderModel) => item.id !== parseInt(id!, 10));
 
-      });
-    }
-  }
+  //     });
+  //   }
+  // }
   
 
-  confirmDelete(id: number): void {
-    if (confirm('Êtes-vous sûr de vouloir supprimer ce fournisseur?')) {
-    this.onDelete(id);
-    }
-    }
+  // confirmDelete(id: number): void {
+  //   if (confirm('Êtes-vous sûr de vouloir supprimer ce fournisseur?')) {
+  //   this.onDelete(id);
+  //   }
+  //   }
 
   onView(provider: ProviderModel): void {
     const dialogRef = this.dialog.open(ViewComponent, {

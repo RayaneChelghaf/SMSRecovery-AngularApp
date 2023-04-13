@@ -16,6 +16,8 @@ import { ViewComponent } from "./items/liste-fournisseurs/view/view.component";
 import { EditComponent } from "./items/liste-fournisseurs/edit/edit.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {ViewDeviceComponent} from "./devices/view/view.component";
+
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
