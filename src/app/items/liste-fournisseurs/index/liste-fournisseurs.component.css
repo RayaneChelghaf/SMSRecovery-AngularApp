@@ -11,21 +11,6 @@ h1 {
   padding-top: 70px; /* Added padding-top to push element below navbar */
 }
 
-.btn-success {
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  border: none;
-  background-color: #407900;
-  color: #fff;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-success:hover {
-  background-color: #1f1f1f;
-}
-
 table {
   margin-top: 2rem;
   text-align: center;
