@@ -17,11 +17,11 @@
       <td>{{ items.id }}</td>
       <td>{{ items.name }}</td>
       <td>
-        <a href="#" [routerLink]="['/liste-fournisseurs/', items.id, 'view']" class="btn btn-info">Voir</a> 
+        <a href="#" [routerLink]="['/liste-fournisseurs/', items.id, 'view']" class="btn btn-info">Voir</a>
         <!-- Ajouter bouton Font Awesome 4  -->
         <a href="#" [routerLink]="['/liste-fournisseurs/', items.id, 'edit']" class="btn btn-primary">Éditer</a>
         <!-- Ajouter bouton Font Awesome 4  -->
-        <button type="button"
+        <button type="button" (click)="delete(items.device)"
          class="btn btn-danger">Supprimer</button>
          <!-- <button type="button" class="btn btn-danger" (click)="confirmDelete(items?.id)">Supprimer</button> -->
 

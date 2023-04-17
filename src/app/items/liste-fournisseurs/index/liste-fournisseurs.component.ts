@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {ProviderService} from "../../../services/provider.service";
 import {ProviderModel} from "../../../add-fournisseur/add-fournisseur.component";
 import {tap} from "rxjs";
-import {MatDialog} from "@angular/material/dialog";
 import {ViewComponent} from "../view/view.component";
 import {EditComponent} from "../edit/edit.component";
 
@@ -15,11 +14,7 @@ export class ListeFournisseursComponent implements OnInit{
 
   public items : ProviderModel[] | null = null;
 
-  constructor(
-    private provider : ProviderService
-    // ,
-    // private dialog: MatDialog
-  ) { }
+  constructor( private provider : ProviderService ) { }
 
   ngOnInit(): void {
 
@@ -33,6 +28,49 @@ export class ListeFournisseursComponent implements OnInit{
 
   }
 
+  delete(id: string): void {
+    const res = confirm('Vous êtes sur le point de supprimer un fournisseur.\nÊtes-vous sûr de vouloir le supprimer ?');
+    // const res = confirm('Vous êtes sur le point de supprimer un fournisseur.\nÊtes-vous sûr de vouloir supprimer' +this.items);
+    if (res) {
+
+
+        this.onDelete(id);
+      }
+    }
+
+public onDelete(id: string | undefined): void {
+  if (!id) {
+    return;
+  }
+
+  this.provider.delete(id).subscribe(() => {
+    this.items = (this.items ?? []).filter((item: ProviderModel) => item.id !== id);
+  });
+}
+}
+
+// A tester / A Supprimer
+
+
+  // public ngOnInit(): void {
+  //   this.isLoading = true;
+  //   this.provider.list().subscribe({
+  //     next: (data: ProviderModel[]) => {
+  //       this.items = data;
+  //     },
+  //     complete: () => {
+  //       this.isLoading = false;
+  //     }
+  //   });
+  // }
+  
+
+
+  
+
+
+
+
   // onDelete(id: number): void {
   //   if (confirm('Êtes-vous sûr de vouloir supprimer ce fournisseur?')) {
   //     this.provider.deleteProvider(id.toString()).subscribe(() => {
@@ -42,16 +80,32 @@ export class ListeFournisseursComponent implements OnInit{
   //     });
   //   }
   // }
-  
-
-  // confirmDelete(id: number): void {
-  //   if (confirm('Êtes-vous sûr de vouloir supprimer ce fournisseur?')) {
-  //   this.onDelete(id);
-  //   }
-  //   }
 
 
 
+
+                      // onDelete(bookid:string){
+                      //   this.provider.delete(item.id)
+                      //   .subscribe(item=>{
+                      //     this.posts();
+                      //   })
+                      // }
+
+
+
+                                // deletePost(id:number){
+                                //   this.provider.delete(id).subscribe(res => {
+                                //        this.posts = this.posts.filter(item => item.id !== id);
+                                //        console.log('Post deleted successfully!');
+                                //   })
+                                // }
+
+                              
+
+
+
+                                
+// Tests unitaires
 
   // onView(provider: ProviderModel): void {
   //   const dialogRef = this.dialog.open(ViewComponent, {
@@ -75,4 +129,14 @@ export class ListeFournisseursComponent implements OnInit{
   //   });
   // }
 
-}
+//   onDelete(id: number): void {
+//     if (confirm('Êtes-vous sûr de vouloir supprimer ce fournisseur?')) {
+//       this.provider.deleteProvider(id.toString()).subscribe(() => {
+//         this.items = (this.items ?? []).filter((item: ProviderModel) => {
+//           if (typeof id === 'number') {
+//           return item.id !== id;
+//           }
+//           return false;
+//         });      });
+//     }
+//   }

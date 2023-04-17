@@ -19,7 +19,8 @@ export class ProviderService {
     return this.httpClient.get<ProviderModel[]>(this.baseUrl + '/provider').pipe(take(1));
   }
 
-  public delete(id: number): Observable<void> {
-    return this.httpClient.delete<void>(`${this.baseUrl}/provider/${id}`).pipe(take(1));
+  public delete(id: string): Observable<any> {
+    return this.httpClient.delete<any>(`${this.baseUrl}/provider/${id}`).pipe(take(1));
   }
+  
 }
