@@ -5,3 +5,175 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* Add application styles & imports to this file! */
+nav {
+    position: fixed; /* Permet de fixer la navbar */
+    top: 0; /* Place la navbar tout en haut de la page */
+    left: 0; /* Place la navbar tout à gauche de la page */
+    width: 100%; /* Donne une largeur de 100% à la navbar */
+    background-color: #333; /* Couleur de fond de la navbar */
+    overflow: hidden; /* Permet de cacher les éléments qui dépassent de la navbar */
+    z-index: 1; /* Place la navbar au-dessus des autres éléments de la page */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+  
+nav a {
+    float: left; /* Permet d'aligner les éléments à gauche */
+    color: white; /* Couleur du texte */
+    text-align: center; /* Alignement du texte */
+    padding: 14px 16px; /* Espacement entre les éléments */
+    text-decoration: none; /* Suppression du soulignement */
+    font-size: 18px; /* Taille de police */
+    margin-right: 10px;
+  }
+  
+  nav a:hover {
+    background-color: #ddd; /* Couleur de fond au survol */
+    color: black; /* Couleur du texte au survol */
+    color: #666;
+
+  }
+  
+  nav a.active {
+    background-color: #4CAF50; /* Couleur de fond de l'élément actif */
+    color: white; /* Couleur du texte de l'élément actif */
+  }
+
+
+
+  
+
+body {
+    --text-color: #222;
+    --bkg-color: #fff;
+    --btn-txt-color: white;
+    --btn-bg-color: #333;
+  }
+  body.dark-theme {
+    --text-color: #eee;
+    --bkg-color: #252222;
+    --btn-txt-color: rgb(46, 43, 43);
+    --btn-bg-color: rgb(20, 211, 138);
+  }
+  
+  body {
+    background: var(--bkg-color);
+  }
+  
+  h1,
+  p {
+    color: var(--text-color);
+  }
+  button {
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    color: var(--btn-txt-color);
+    background-color: var(--btn-bg-color);
+  }
+  
+
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-top: 70px; /* Ajout de padding-top pour pousser l'élément sous la navbar */
+  
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+
+  }
+
+  td {
+
+    color: var(--text-color);
+
+  }
+
+
+  
+  strong {
+
+    color: var(--text-color);
+
+  }
+
+  
+  .btn.btn-info {
+
+    color: var(--text-color);
+
+  }
+
+  .btn.btn-primary {
+
+    color: var(--text-color);
+
+  }
+
+  .btn.btn-success {
+
+    color: var(--bkg-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #407900;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-success:hover {
+    background-color: var(--text-color);
+
+  }
+  
+
+  .btn.btn-danger {
+
+    color: var(--text-color);
+
+  }
+  
+  input[type="text"] {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem;
+  }
+  
+  button[type="submit"] {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #407900;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #1f1f1f;
+  }
+  
