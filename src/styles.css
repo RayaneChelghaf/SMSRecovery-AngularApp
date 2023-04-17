@@ -143,7 +143,8 @@ body {
   }
   
   .btn-success:hover {
-    background-color: #1f1f1f;
+    background-color: var(--text-color);
+
   }
   
 
