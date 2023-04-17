@@ -36,16 +36,28 @@ export class ListeFournisseursComponent implements OnInit{
       }
     }
 
-public onDelete(id: string | undefined): void {
-  if (!id) {
-    return;
-  }
+    public onDelete(id: string | undefined): void {
+      if (!id) {
+        return;
+      }
+    
+      console.log('Suppression de Fournisseurs avec IP :', id);
+    
+      this.provider.delete(id).subscribe(() => {
+    
+        console.log('Fournisseurs avec IP', id, 'supprimés avec succès');
+    
+        this.items = (this.items ?? []).filter((item: ProviderModel) => item.id !== id);
+     
+        
+        console.log('Liste des fournisseurs après supression :', this.items);
+      }, (error) => {
+        console.error('Une erreur est survenue lors de la suppression du fournisseur via son IP', id, ':', error);
+      });
+    }
+    
+    }
 
-  this.provider.delete(id).subscribe(() => {
-    this.items = (this.items ?? []).filter((item: ProviderModel) => item.id !== id);
-  });
-}
-}
 
 // A tester / A Supprimer
 
