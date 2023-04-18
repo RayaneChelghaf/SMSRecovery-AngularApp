@@ -16,7 +16,6 @@ import { Post } from '../post';
 
 
 
-
 export class IndexComponent implements OnInit {
       
 
