@@ -3,8 +3,8 @@ export interface ProviderModel {
   name: string;
   url: string;
 
-  body?: string;
-  address?: string;
-  date? :string;
+  // body?: string;
+  // address?: string;
+  // date? :string;
 
 }
