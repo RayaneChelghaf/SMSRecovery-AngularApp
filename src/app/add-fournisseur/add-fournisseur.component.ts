@@ -11,8 +11,7 @@ import { ProviderModel } from '../fournisseurs/items';
 export class AddFournisseurComponent {
   public model :ProviderModel = {
     name : '',
-    device : ''
-
+    url : ''
   }
 
   constructor(private providerService : ProviderService) {

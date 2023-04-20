@@ -10,7 +10,7 @@
   <table *ngIf="items" class="table table-bordered" style="text-align: center;">
     <tr>
       <th>IP </th>
-      <th>Nom </th>
+      <th>Url du fournisseur	 </th>
       <th width="220px">Action</th>
     </tr>
     <tr *ngFor="let items of items">
@@ -21,7 +21,7 @@
         <!-- Ajouter bouton Font Awesome 4  -->
         <a href="#" [routerLink]="['/liste-fournisseurs/', items.id, 'edit']" class="btn btn-primary">Éditer</a>
         <!-- Ajouter bouton Font Awesome 4  -->
-        <button type="button" (click)="delete(items.device)"
+        <button type="button" (click)="delete(items.url)"
          class="btn btn-danger">Supprimer</button>
          <!-- <button type="button" class="btn btn-danger" (click)="confirmDelete(items?.id)">Supprimer</button> -->
 

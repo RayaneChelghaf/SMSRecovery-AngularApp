@@ -1,8 +1,8 @@
 <div class="container" *ngIf="item">
     <h1>Éditer le fournisseur</h1>
-  
+
     <a href="#" routerLink="/liste-fournisseurs" class="btn btn-primary">Retour</a>
-  
+
     <br>
 
     <div style="text-align: center;">
@@ -13,10 +13,10 @@
     <br>
 
     <div style="text-align: center;">
-        <strong> Device :</strong>
-        <input class="form-control" [(ngModel)]="item.device">
+        <strong> Url :</strong>
+        <input class="form-control" [(ngModel)]="item.url">
     </div>
-  
+
     <br>
 
     <div style="text-align: center;">
@@ -24,7 +24,7 @@
       </div>
 
       <br>
-  
+
   <p *ngIf="!item">
     Chargement en cours ...
   </p>

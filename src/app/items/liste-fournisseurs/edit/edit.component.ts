@@ -45,7 +45,7 @@ export class EditComponent implements OnInit {
    * @return response()
    */
   submit(){
-    if (!this.item?.device || !this.item?.name) {
+    if (!this.item?.url || !this.item?.name) {
 
       // Mettre en place de meilleure validation
         return ; 
