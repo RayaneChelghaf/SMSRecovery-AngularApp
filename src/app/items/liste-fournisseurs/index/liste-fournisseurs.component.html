@@ -9,21 +9,21 @@
 
   <table *ngIf="items" class="table table-bordered" style="text-align: center;">
     <tr>
-      <th>IP </th>
+      <th>Nom </th>
       <th>Url du fournisseur	 </th>
       <th width="220px">Action</th>
     </tr>
-    <tr *ngFor="let items of items">
-      <td>{{ items.id }}</td>
-      <td>{{ items.name }}</td>
+    <tr *ngFor="let item of items">
+      <td>{{ item.name }}</td>
+      <td>{{ item.url }}</td>
       <td>
-        <a href="#" [routerLink]="['/liste-fournisseurs/', items.id, 'view']" class="btn btn-info">Voir</a>
+        <a href="#" [routerLink]="['/liste-fournisseurs/', item.id, 'view']" class="btn btn-info">Voir</a>
         <!-- Ajouter bouton Font Awesome 4  -->
-        <a href="#" [routerLink]="['/liste-fournisseurs/', items.id, 'edit']" class="btn btn-primary">Éditer</a>
+        <a href="#" [routerLink]="['/liste-fournisseurs/', item.id, 'edit']" class="btn btn-primary">Éditer</a>
         <!-- Ajouter bouton Font Awesome 4  -->
-        <button type="button" (click)="delete(items.url)"
+        <button type="button" (click)="delete(item.id)"
          class="btn btn-danger">Supprimer</button>
-         <!-- <button type="button" class="btn btn-danger" (click)="confirmDelete(items?.id)">Supprimer</button> -->
+         <!-- <button type="button" class="btn btn-danger" (click)="confirmDelete(item?.id)">Supprimer</button> -->
 
       </td>
     </tr>

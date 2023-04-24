@@ -1,31 +1,24 @@
 import {Component, OnInit} from '@angular/core';
-import {ProviderService} from "../services/provider.service";
-import {ProviderModel} from "../add-fournisseur/add-fournisseur.component";
-import {tap} from "rxjs";
+import {DeviceNameMapping, DeviceNameMappingService} from "../services/device-name-mapping.service";
+import {  tap} from "rxjs";
 
 @Component({
-  selector: 'app-liste-fournisseur',
-   templateUrl: './liste-devices.component.html',
-styleUrls: ['./liste-devices.component.css']
+    selector: 'app-liste-fournisseur',
+    templateUrl: './liste-devices.component.html',
+    styleUrls: ['./liste-devices.component.css']
 })
-export class ListeDevicesComponent implements OnInit{
+export class ListeDevicesComponent implements OnInit {
 
-  public items : ProviderModel[] | null = null;
+    public items : DeviceNameMapping[] | null  = null;
 
-  constructor(private provider : ProviderService) {
+    constructor(private deviceNameMappingService: DeviceNameMappingService) {
 
-  }
+    }
 
-  ngOnInit(): void {
-
-    let result = this.provider.list();
-
-    result
-      .pipe(
-        tap(t => this.items = t)
-      )
-      .subscribe();
-
-  }
+    ngOnInit(): void {
+        this.deviceNameMappingService.listMapping().pipe(
+            tap(t => this.items = t)
+        ).subscribe();
+    }
 
 }

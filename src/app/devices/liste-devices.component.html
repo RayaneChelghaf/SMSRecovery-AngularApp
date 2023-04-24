@@ -5,18 +5,16 @@
 
     <table *ngIf="items" class="table table-bordered" style="text-align: center;">
       <tr>
-        <th>Fournisseur </th>
+        <th>Device id (retourné par ADB) </th>
         <th>Libellé </th>
-        <th>Url du device</th>
         <th width="220px">Action</th>
       </tr>
-      <tr *ngFor="let items of items">
-        <td>{{ items.id }}</td>
-        <td>{{ items.url }}</td>
-        <td>{{ items.name }}</td>
+      <tr *ngFor="let item of items">
+        <td>{{ item.id }}</td>
+        <td>{{ item.label }}</td>
         <td>
 
-          <a href="#" [routerLink]="['/liste-devices/', items.id, 'view']" class="btn btn-info">Voir</a>
+          <a href="#" [routerLink]="['/liste-devices/', item.id, 'view']" class="btn btn-info">Voir</a>
 
         </td>
       </tr>
