@@ -11,18 +11,16 @@
             <th>Fournisseur </th>
             <th>Contenu </th>
             <th>Device Id</th>
-           <th width="220px">Action</th>
+           <!-- <th width="220px">Action</th> -->
         </tr>
         <tr *ngFor="let message of messages">
             <td>{{ message.date | date: 'dd/MM/YYYY h:mm:ss a' }}</td>
             <td>{{ message.address }}</td>
             <td>{{ message.body }}</td>
             <td>{{ message.deviceId }}</td>
-           <td>
-               <!-- <a href="#" [routerLink]="['/liste-devices/', message.body, 'view']" class="btn btn-info">Voir</a> -->
-               <a href="#" [routerLink]="['/liste-devices/', message.body, 'edit']" class="btn btn-primary">Éditer</a>
-               <!-- <button type="button" (click)="deletePost(message.body)" class="btn btn-danger">Supprimer</button> -->
-           </td>
+           <!-- <td>
+               <a href="#" [routerLink]="['/liste-devices/', message.body, 'view']" class="btn btn-info">Voir</a>
+           </td> -->
         </tr>
     </table>
 </div>
