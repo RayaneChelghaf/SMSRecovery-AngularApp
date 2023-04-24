@@ -13,7 +13,7 @@ nav {
     top: 0; /* Place la navbar tout en haut de la page */
     left: 0; /* Place la navbar tout à gauche de la page */
     width: 100%; /* Donne une largeur de 100% à la navbar */
-    background-color: #333; /* Couleur de fond de la navbar */
+    background-color: var(--btn-bg-color); /* Couleur de fond de la navbar */
     overflow: hidden; /* Permet de cacher les éléments qui dépassent de la navbar */
     z-index: 1; /* Place la navbar au-dessus des autres éléments de la page */
 
@@ -27,7 +27,7 @@ nav {
   
 nav a {
     float: left; /* Permet d'aligner les éléments à gauche */
-    color: white; /* Couleur du texte */
+    color: var(--bkg-color); /* Couleur du texte */
     text-align: center; /* Alignement du texte */
     padding: 14px 16px; /* Espacement entre les éléments */
     text-decoration: none; /* Suppression du soulignement */

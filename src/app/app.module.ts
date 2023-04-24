@@ -23,6 +23,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { MatInputModule } from '@angular/material/input';
     ListeDevicesComponent,
     ViewComponent,
     EditComponent,
-    ViewDeviceComponent
+    ViewDeviceComponent,
+    MessageComponent
   ],
   imports: [
     CommonModule,
