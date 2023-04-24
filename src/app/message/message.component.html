@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Liste des messages</h1>
+
+    <p style="text-align: center;" *ngIf="messages === null">Chargement en cours... </p>
+
+    <br>
+
+    <table class="table table-bordered" style="text-align: center;">
+        <tr>
+            <th>Date </th>
+            <th>Fournisseur </th>
+            <th>Contenu </th>
+            <th>Device Id</th>
+<!--            <th width="220px">Action</th>-->
+        </tr>
+        <tr *ngFor="let message of messages">
+            <td>{{ message.date }}</td>
+            <td>{{ message.address }}</td>
+            <td>{{ message.body }}</td>
+            <td>{{ message.deviceId }}</td>
+<!--            <td>-->
+<!--                <a href="#" [routerLink]="['/message/', post.id, 'view']" class="btn btn-info">Voir</a>-->
+<!--                <a href="#" [routerLink]="['/message/', post.id, 'edit']" class="btn btn-primary">Éditer</a>-->
+<!--                <button type="button" (click)="deletePost(post.id)" class="btn btn-danger">Supprimer</button>-->
+<!--            </td>-->
+        </tr>
+    </table>
+</div>

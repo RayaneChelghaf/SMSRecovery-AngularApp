@@ -27,7 +27,10 @@ export class ListeFournisseursComponent implements OnInit{
 
   }
 
-  delete(id: string): void {
+  delete(id?: string): void {
+    if (!id)
+        return;
+
     const res = confirm('Vous êtes sur le point de supprimer un fournisseur.\nÊtes-vous sûr de vouloir le supprimer ?');
     // const res = confirm('Vous êtes sur le point de supprimer un fournisseur.\nÊtes-vous sûr de vouloir supprimer' +this.items);
     if (res) {
@@ -40,22 +43,22 @@ export class ListeFournisseursComponent implements OnInit{
       if (!id) {
         return;
       }
-    
+
       console.log('Suppression de Fournisseurs avec IP :', id);
-    
+
       this.provider.delete(id).subscribe(() => {
-    
+
         console.log('Fournisseurs avec IP', id, 'supprimés avec succès');
-    
+
         this.items = (this.items ?? []).filter((item: ProviderModel) => item.id !== id);
-     
-        
+
+
         console.log('Liste des fournisseurs après supression :', this.items);
       }, (error) => {
         console.error('Une erreur est survenue lors de la suppression du fournisseur via son IP', id, ':', error);
       });
     }
-    
+
     }
 
 
@@ -75,7 +78,7 @@ export class ListeFournisseursComponent implements OnInit{
   //     }
   //   });
   // }
-  
+
 
 
 
@@ -111,9 +114,9 @@ export class ListeFournisseursComponent implements OnInit{
                                 //   })
                                 // }
 
-                              
 
-                             
+
+
 // Tests unitaires
 
   // onView(provider: ProviderModel): void {

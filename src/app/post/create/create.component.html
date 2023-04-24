@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Ajouter un message</h1>
+    <h1>Ajouter un device</h1>
   
     <a href="#" routerLink="/message/index" class="btn btn-primary">Retour</a>
         
@@ -9,6 +9,11 @@
   
         <div class="form-group">
             <label for="title">IP:</label>
+            <!-- <label>Nom du fournisseur</label>
+            <input type="text" name="nom" [(ngModel)]="model.name">
+          
+            <button routerLink="/liste-fournisseurs/" class="btn btn-primary" [disabled]="!model.name" (click)="addNewModel()">Ajouter</button>
+           -->
             <input 
                 formControlName="title"
                 id="title" 
