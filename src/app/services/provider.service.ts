@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable, take} from 'rxjs';
 import {ProviderModel} from '../add-fournisseur/add-fournisseur.component';
-import {Message} from "../message/message.component";
+import {Message} from "../liste-devices/liste-devices.component";
 
 @Injectable({
     providedIn: 'root'
@@ -26,6 +26,6 @@ export class ProviderService {
     }
 
     public listMessages() : Observable<Message[]> {
-        return this.httpClient.get<Message[]>(`${this.baseUrl}/message/list`).pipe(take(1));
+        return this.httpClient.get<Message[]>(`${this.baseUrl}/liste-devices/list`).pipe(take(1));
     }
 }

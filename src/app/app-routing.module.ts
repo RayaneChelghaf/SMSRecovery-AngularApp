@@ -9,7 +9,7 @@ import {ViewComponent} from "./items/liste-fournisseurs/view/view.component";
 import {EditComponent} from "./items/liste-fournisseurs/edit/edit.component";
 
 import {ViewDeviceComponent} from "./devices/view/view.component";
-import {MessageComponent} from "./message/message.component";
+import {DeviceComponent} from "./liste-devices/liste-devices.component";
 
 
 const routes: Routes = [
@@ -23,7 +23,7 @@ const routes: Routes = [
     {path: 'liste-devices/:deviceId/view', component: ViewDeviceComponent, pathMatch: 'full'},
     {
         path: 'liste-messages',
-        component: MessageComponent
+        component: DeviceComponent
     },
 ];
 

@@ -4,10 +4,10 @@ import {tap} from "rxjs";
 
 @Component({
   selector: 'app-message',
-  templateUrl: './message.component.html',
-  styleUrls: ['./message.component.css']
+  templateUrl: './liste-devices.component.html',
+  styleUrls: ['./liste-devices.component.css']
 })
-export class MessageComponent implements  OnInit{
+export class DeviceComponent implements  OnInit{
 
     public messages : Message[] | null  = null ;
 
