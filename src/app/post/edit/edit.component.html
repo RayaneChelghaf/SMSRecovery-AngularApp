@@ -1,13 +1,13 @@
 <div class="container">
     <h1>Éditer le message</h1>
    
-    <a href="#" routerLink="/liste-devices/index" class="btn btn-primary">Retour</a>
+    <a href="#" routerLink="/liste-messages" class="btn btn-primary">Retour</a>
 
     <br>
           
     <form [formGroup]="form" (ngSubmit)="submit()">
     
-        <div class="form-group">
+        <div class="form-group" style="text-align: center;">
             <label for="title">IP:</label>
             <input 
                 formControlName="title"
@@ -22,7 +22,7 @@
            
         <br>
 
-        <div class="form-group">
+        <div class="form-group" style="text-align: center;">
             <label for="body">Contenu :</label>
             <textarea 
                 formControlName="body"

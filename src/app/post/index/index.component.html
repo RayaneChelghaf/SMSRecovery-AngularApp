@@ -3,7 +3,7 @@
   
     <p style="text-align: center;" *ngIf="items === null">Chargement en cours... </p>
 
-    <a href="#" routerLink="/liste-devices/create/" class="btn btn-success">Ajouter un message</a>
+    <a href="#" routerLink="/" class="btn btn-success">Ajouter un message</a>
 
     <br>
     
@@ -19,8 +19,8 @@
         <td>{{ post.title }}</td>
         <td>{{ post.body }}</td>
         <td>
-          <a href="#" [routerLink]="['/liste-devices/', post.id, 'view']" class="btn btn-info">Voir</a>
-          <a href="#" [routerLink]="['/liste-devices/', post.id, 'edit']" class="btn btn-primary">Éditer</a>
+          <a href="#" [routerLink]="['/', post.id, 'view']" class="btn btn-info">Voir</a>
+          <a href="#" [routerLink]="['/', post.id, 'edit']" class="btn btn-primary">Éditer</a>
           <button type="button" (click)="deletePost(post.id)" class="btn btn-danger">Supprimer</button>
         </td>
       </tr>
