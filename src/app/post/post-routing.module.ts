@@ -8,12 +8,12 @@ import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 
 const routes: Routes = [
-  { path: 'message', redirectTo: 'message/index', pathMatch: 'full'},
-  { path: 'message/index', component: IndexComponent },
+  { path: 'liste-devices', redirectTo: 'liste-devices/index', pathMatch: 'full'},
+  { path: 'liste-devices/index', component: IndexComponent },
 
-  { path: 'message/:messageId/view', component: ViewComponent },
-  { path: 'message/create', component: CreateComponent },
-  { path: 'message/:messageId/edit', component: EditComponent }
+  { path: 'liste-devices/:messageId/view', component: ViewComponent },
+  { path: 'liste-devices/create', component: CreateComponent },
+  { path: 'liste-devices/:messageId/edit', component: EditComponent }
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],

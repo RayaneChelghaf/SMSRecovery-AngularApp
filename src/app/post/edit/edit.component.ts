@@ -61,7 +61,7 @@ export class EditComponent implements OnInit {
     console.log(this.form.value);
     this.postService.update(this.id, this.form.value).subscribe((res:any) => {
          console.log('Post updated successfully!');
-         this.router.navigateByUrl('message/index');
+         this.router.navigateByUrl('liste-devices/index');
     })
   }
    
