@@ -1,6 +1,8 @@
 <div class="container">
     <h1>Liste des devices</h1>
 
+    <a href="#" routerLink="/liste-devices/create" class="btn btn-success">Ajouter un device</a>
+
     <p style="text-align: center;" *ngIf="items === null">Chargement en cours... </p>
 
     <table *ngIf="items" class="table table-bordered" style="text-align: center;">
