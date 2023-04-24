@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AppComponent } from '../app.component'
 
 @Component({
   selector: 'app-navbar',
@@ -13,4 +12,3 @@ export class NavbarComponent {
     document.body.classList.toggle('dark-theme');
   }
   }
-

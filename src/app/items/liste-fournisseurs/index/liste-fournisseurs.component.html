@@ -18,12 +18,8 @@
       <td>{{ item.url }}</td>
       <td>
         <a href="#" [routerLink]="['/liste-fournisseurs/', item.id, 'view']" class="btn btn-info">Voir</a>
-        <!-- Ajouter bouton Font Awesome 4  -->
         <a href="#" [routerLink]="['/liste-fournisseurs/', item.id, 'edit']" class="btn btn-primary">Éditer</a>
-        <!-- Ajouter bouton Font Awesome 4  -->
-        <button type="button" (click)="delete(item.id)"
-         class="btn btn-danger">Supprimer</button>
-         <!-- <button type="button" class="btn btn-danger" (click)="confirmDelete(item?.id)">Supprimer</button> -->
+        <button type="button" (click)="delete(item.id)" class="btn btn-danger">Supprimer</button>
 
       </td>
     </tr>

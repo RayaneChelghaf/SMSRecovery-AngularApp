@@ -33,9 +33,3 @@ export class AddFournisseurComponent {
 
 
 export { ProviderModel };
-// export interface ProviderModel {
-//   id?: string;
-//   name: string;
-//   device: string;
-
-// }
