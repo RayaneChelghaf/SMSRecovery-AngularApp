@@ -9,7 +9,7 @@ import {ViewComponent} from "./items/liste-fournisseurs/view/view.component";
 import {EditComponent} from "./items/liste-fournisseurs/edit/edit.component";
 
 import {ViewDeviceComponent} from "./devices/view/view.component";
-import {DeviceComponent} from "./liste-devices/liste-devices.component";
+import {DeviceComponent} from "./message/message.component";
 
 
 const routes: Routes = [
