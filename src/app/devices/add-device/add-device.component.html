@@ -1,14 +1,15 @@
 <h1>Ajouter une correspondante device -> nom</h1>
 
-<div>
+<div class="container">
 
     <label>Device Id</label>
     <input type="text" [(ngModel)]="createDeviceNameMappingModel.deviceId">
     <label>Libellé</label>
     <input type="text" [(ngModel)]="createDeviceNameMappingModel.label">
 
-    <button class="btn btn-primary"
+    <button class="btn btn-submit"
             [disabled]="!createDeviceNameMappingModel.deviceId || !createDeviceNameMappingModel.label"
             (click)="addNewModel()">Ajouter
     </button>
+    
 </div>

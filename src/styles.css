@@ -112,6 +112,12 @@ label {
 
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 td {
 
     color: var(--text-color);
@@ -132,10 +138,32 @@ strong {
 
 }
 
-.btn.btn-primary {
+.btn.btn-submit {
+
+    color: var(--text-color);
+        padding: 0.5rem 10rem;
+        border-radius: 5px;
+        border: none;
+        background-color: #0d6efd;
+        color: #fff;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    
+
+}
+
+.btn.btn-submit:hover {
+    background-color: #0a58ca;
+
+}.btn.btn-primary {
 
     color: var(--text-color);
 
+}
+
+.btn.btn-primary:hover {
+    background-color: #0a58ca;
 }
 
 .btn.btn-success {

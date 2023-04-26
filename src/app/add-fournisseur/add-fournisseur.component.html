@@ -4,7 +4,7 @@
     <label>Url du fournisseur</label>
     <input type="text" name="url" [(ngModel)]="model.name">
 
-    <button routerLink="/liste-fournisseurs/" class="btn btn-primary" [disabled]="!model.name" (click)="addNewModel()">
+    <button routerLink="/liste-fournisseurs/" class="btn btn-submit" [disabled]="!model.name" (click)="addNewModel()">
         Ajouter
     </button>
 
