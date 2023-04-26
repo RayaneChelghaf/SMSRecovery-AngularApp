@@ -70,6 +70,26 @@ body {
     background: var(--bkg-color);
 }
 
+table {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+th, td {
+    padding: 0.5rem;
+}
+
+th {
+    background-color: #eee;
+}
+
+
+td {
+
+    color: var(--text-color);
+
+}
+
 h1,
 p {
     color: var(--text-color);
@@ -119,13 +139,6 @@ label {
     flex-direction: column;
     align-items: center;
 }
-
-td {
-
-    color: var(--text-color);
-
-}
-
 
 strong {
 
