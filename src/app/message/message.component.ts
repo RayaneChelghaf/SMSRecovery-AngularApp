@@ -3,29 +3,29 @@ import {ProviderService} from "../services/provider.service";
 import {tap} from "rxjs";
 
 @Component({
-  selector: 'app-message',
-  templateUrl: './message.component.html',
-  styleUrls: ['./message.component.css']
+    selector: 'app-message',
+    templateUrl: './message.component.html',
+    styleUrls: ['./message.component.css']
 })
-export class DeviceComponent implements  OnInit{
+export class DeviceComponent implements OnInit {
 
-    public messages : Message[] | null  = null ;
+    public messages: Message[] | null = null;
 
-    constructor(private providerService : ProviderService) {
+    constructor(private providerService: ProviderService) {
     }
 
     ngOnInit(): void {
         this.providerService.listMessages()
             .pipe(
                 tap(t => this.messages = t)
-            ).subscribe() ;
+            ).subscribe();
     }
 }
 
 export interface Message {
-  address : string ;
-  body : string ;
-  date : Date;
-  deviceId : string;
-  label : string;
+    address: string;
+    body: string;
+    date: Date;
+    deviceId: string;
+    label: string;
 }

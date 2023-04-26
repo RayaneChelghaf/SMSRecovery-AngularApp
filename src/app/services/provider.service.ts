@@ -17,6 +17,7 @@ export class ProviderService {
     public add(model: ProviderModel): Observable<boolean> {
         return this.httpClient.post<boolean>(this.baseUrl + '/provider', model).pipe(take(1));
     }
+
     public addDevice(model: DeviceNameMapping): Observable<boolean> {
         return this.httpClient.post<boolean>(this.baseUrl + '/provider', model).pipe(take(1));
     }
@@ -29,7 +30,7 @@ export class ProviderService {
         return this.httpClient.delete<any>(`${this.baseUrl}/provider/${id}`).pipe(take(1));
     }
 
-    public listMessages() : Observable<Message[]> {
+    public listMessages(): Observable<Message[]> {
         return this.httpClient.get<Message[]>(`${this.baseUrl}/message/list`).pipe(take(1));
     }
 }

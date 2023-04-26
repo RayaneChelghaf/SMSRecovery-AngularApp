@@ -1,23 +1,23 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { AddFournisseurComponent } from './add-fournisseur.component';
+import {AddFournisseurComponent} from './add-fournisseur.component';
 
 describe('AddFournisseurComponent', () => {
-  let component: AddFournisseurComponent;
-  let fixture: ComponentFixture<AddFournisseurComponent>;
+    let component: AddFournisseurComponent;
+    let fixture: ComponentFixture<AddFournisseurComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ AddFournisseurComponent ]
-    })
-    .compileComponents();
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            declarations: [AddFournisseurComponent]
+        })
+            .compileComponents();
 
-    fixture = TestBed.createComponent(AddFournisseurComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+        fixture = TestBed.createComponent(AddFournisseurComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });

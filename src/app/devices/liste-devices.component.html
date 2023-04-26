@@ -6,18 +6,18 @@
     <p style="text-align: center;" *ngIf="items === null">Chargement en cours... </p>
 
     <table *ngIf="items" class="table table-bordered" style="text-align: center;">
-      <tr>
-        <th>Device id (retourné par ADB) </th>
-        <th>Libellé </th>
-        <th width="220px">Action</th>
-      </tr>
-      <tr *ngFor="let item of items">
-        <td>{{ item.deviceId }}</td>
-        <td>{{ item.label }}</td>
-        <td>
-          <a href="javascript:;" *ngIf="item.id" (click)="deleteDeviceNameMapping(item.id)" class="btn btn-info">Supprimer</a>
+        <tr>
+            <th>Device id (retourné par ADB)</th>
+            <th>Libellé</th>
+            <th width="220px">Action</th>
+        </tr>
+        <tr *ngFor="let item of items">
+            <td>{{ item.deviceId }}</td>
+            <td>{{ item.label }}</td>
+            <td>
+                <a href="javascript:;" *ngIf="item.id" (click)="deleteDeviceNameMapping(item.id)" class="btn btn-info">Supprimer</a>
 
-        </td>
-      </tr>
+            </td>
+        </tr>
     </table>
- </div>
+</div>

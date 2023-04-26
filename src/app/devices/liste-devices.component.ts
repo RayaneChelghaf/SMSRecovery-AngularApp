@@ -9,7 +9,7 @@ import {Observable, switchMap, tap} from "rxjs";
 })
 export class ListeDevicesComponent implements OnInit {
 
-    public items : DeviceNameMapping[] | null  = null;
+    public items: DeviceNameMapping[] | null = null;
 
     constructor(private deviceNameMappingService: DeviceNameMappingService) {
 
@@ -19,7 +19,7 @@ export class ListeDevicesComponent implements OnInit {
         this.refreshMappingList().subscribe();
     }
 
-    private refreshMappingList() : Observable<DeviceNameMapping[]> {
+    private refreshMappingList(): Observable<DeviceNameMapping[]> {
         return this.deviceNameMappingService.listMapping().pipe(
             tap(t => this.items = t)
         )

@@ -1,53 +1,54 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 table {
-  margin-top: 2rem;
-  text-align: center;
+    margin-top: 2rem;
+    text-align: center;
 }
 
 th, td {
-  padding: 0.5rem;
+    padding: 0.5rem;
 }
 
 th {
-  background-color: #eee;
+    background-color: #eee;
 }
 
 .btn-action {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: none;
-  margin-right: 5px;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    margin-right: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .btn-action:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
 
 .btn-action i {
-  margin-right: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 .btn-action.btn-view {
-  background-color: #28a745;
+    background-color: #28a745;
 }
 
 .btn-action.btn-edit {
-  background-color: #ffc107;
+    background-color: #ffc107;
 }
 
 .btn-action.btn-delete {
-  background-color: #dc3545;
+    background-color: #dc3545;
 }

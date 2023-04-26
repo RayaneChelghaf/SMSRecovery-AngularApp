@@ -10,7 +10,7 @@ import {EditComponent} from "./items/liste-fournisseurs/edit/edit.component";
 
 import {ViewDeviceComponent} from "./devices/view/view.component";
 import {DeviceComponent} from "./message/message.component";
-import { AddDeviceComponent } from './devices/add-device/add-device.component';
+import {AddDeviceComponent} from './devices/add-device/add-device.component';
 
 
 const routes: Routes = [

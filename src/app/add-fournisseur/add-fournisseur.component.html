@@ -1,9 +1,11 @@
 <h1>Ajouter un fournisseur</h1>
 
 <form>
-  <label>Url du fournisseur</label>
-  <input type="text" name="url" [(ngModel)]="model.name">
+    <label>Url du fournisseur</label>
+    <input type="text" name="url" [(ngModel)]="model.name">
 
-  <button routerLink="/liste-fournisseurs/" class="btn btn-primary" [disabled]="!model.name" (click)="addNewModel()">Ajouter</button>
+    <button routerLink="/liste-fournisseurs/" class="btn btn-primary" [disabled]="!model.name" (click)="addNewModel()">
+        Ajouter
+    </button>
 
 </form>
