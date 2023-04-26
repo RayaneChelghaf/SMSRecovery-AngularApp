@@ -27,4 +27,5 @@ export interface Message {
   body : string ;
   date : Date;
   deviceId : string;
+  label : string;
 }

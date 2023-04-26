@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable, take} from 'rxjs';
 import {ProviderModel} from '../add-fournisseur/add-fournisseur.component';
 import {Message} from "../message/message.component";
+import {DeviceNameMapping} from "../services/device-name-mapping.service";
 
 @Injectable({
     providedIn: 'root'
@@ -14,6 +15,9 @@ export class ProviderService {
     }
 
     public add(model: ProviderModel): Observable<boolean> {
+        return this.httpClient.post<boolean>(this.baseUrl + '/provider', model).pipe(take(1));
+    }
+    public addDevice(model: DeviceNameMapping): Observable<boolean> {
         return this.httpClient.post<boolean>(this.baseUrl + '/provider', model).pipe(take(1));
     }
 

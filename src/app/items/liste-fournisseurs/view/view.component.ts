@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from '../../../post/post.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProviderModel } from '../../../../app/fournisseurs/items';
 import {FournisseursService} from "../../../fournisseurs/fournisseurs.service";

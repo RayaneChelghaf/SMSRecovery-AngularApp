@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {DeviceNameMapping, DeviceNameMappingService} from "../services/device-name-mapping.service";
-import {  tap} from "rxjs";
+import {Observable, switchMap, tap} from "rxjs";
 
 @Component({
     selector: 'app-liste-fournisseur',
@@ -16,9 +16,22 @@ export class ListeDevicesComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.deviceNameMappingService.listMapping().pipe(
-            tap(t => this.items = t)
-        ).subscribe();
+        this.refreshMappingList().subscribe();
     }
 
+    private refreshMappingList() : Observable<DeviceNameMapping[]> {
+        return this.deviceNameMappingService.listMapping().pipe(
+            tap(t => this.items = t)
+        )
+    }
+
+    deleteDeviceNameMapping(id: string) {
+        if (confirm("Voulez-vous vraiment supprimer cette correspondance?")) {
+            this.deviceNameMappingService.deleteDeviceNameMapping(id)
+                .pipe(
+                    switchMap(_ => this.refreshMappingList())
+                )
+                .subscribe();
+        }
+    }
 }
