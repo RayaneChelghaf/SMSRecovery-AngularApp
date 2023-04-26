@@ -35,6 +35,8 @@ nav a {
     text-decoration: none; /* Suppression du soulignement */
     font-size: 18px; /* Taille de police */
     margin-right: 10px;
+    border-radius: 10px;
+
 }
 
 nav a:hover {
@@ -146,7 +148,7 @@ strong {
 
     color: var(--text-color);
         padding: 0.5rem 10rem;
-        border-radius: 5px;
+        border-radius: 10px;
         border: none;
         background-color: #0d6efd;
         color: #fff;
@@ -184,7 +186,7 @@ strong {
 
     color: var(--bkg-color);
     padding: 0.5rem 1rem;
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
     background-color: var(--btn-bg-color);
     font-size: 1.2rem;
