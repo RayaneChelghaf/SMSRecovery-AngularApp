@@ -10,6 +10,7 @@ import {EditComponent} from "./items/liste-fournisseurs/edit/edit.component";
 
 import {ViewDeviceComponent} from "./devices/view/view.component";
 import {DeviceComponent} from "./message/message.component";
+import { AddDeviceComponent } from './devices/add-device/add-device.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
     {path: 'liste-fournisseurs/:fournisseurId/edit', component: EditComponent, pathMatch: 'full'},
     {path: 'liste-fournisseurs', component: ListeFournisseursComponent},
     {path: 'liste-devices', component: ListeDevicesComponent},
+    {path: 'liste-devices/create', component: AddDeviceComponent},
     {path: 'liste-devices/:deviceId/view', component: ViewDeviceComponent, pathMatch: 'full'},
     {
         path: 'liste-messages',
