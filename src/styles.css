@@ -138,6 +138,10 @@ strong {
 
 }
 
+.btn-info:hover {
+    color: var(--bkg-color);
+}
+
 .btn.btn-submit {
 
     color: var(--text-color);
@@ -164,6 +168,16 @@ strong {
 
 .btn.btn-primary:hover {
     background-color: #0a58ca;
+    color: var(--bkg-color);
+}
+
+.btn.btn-danger {
+
+    color: var(--text-color);
+}
+
+.btn-danger:hover {
+    color: var(--bkg-color);
 }
 
 .btn.btn-success {
@@ -172,22 +186,15 @@ strong {
     padding: 0.5rem 1rem;
     border-radius: 5px;
     border: none;
-    background-color: #407900;
+    background-color: var(--btn-bg-color);
     font-size: 1.2rem;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .btn-success:hover {
-    background-color: var(--text-color);
-
-}
-
-
-.btn.btn-danger {
-
-    color: var(--text-color);
-
+    background-color: #eee;
+    color: var(--btn-bg-color);
 }
 
 input[type="text"] {
@@ -196,19 +203,4 @@ input[type="text"] {
     border: none;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
     margin-bottom: 1.5rem;
-}
-
-button[type="submit"] {
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    border: none;
-    background-color: #407900;
-    color: #fff;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-button[type="submit"]:hover {
-    background-color: #1f1f1f;
 }
