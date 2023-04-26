@@ -14,7 +14,7 @@
             <th>Device Id</th>
         </tr>
         <tr *ngFor="let message of messages">
-            <td>{{ message.date | date: 'dd/MM/YYYY h:mm:ss a' }}</td>
+            <td>{{ message.date | date: ' dd/MM/YYYY HH:mm:ss' }}</td>
             <td>{{ message.address }}</td>
             <td>{{ message.body }}</td>
             <td>{{ message.label }}</td>
