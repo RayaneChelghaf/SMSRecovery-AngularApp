@@ -15,8 +15,7 @@
             <td>{{ item.deviceId }}</td>
             <td>{{ item.label }}</td>
             <td>
-                <a href="javascript:;" *ngIf="item.id" (click)="deleteDeviceNameMapping(item.id)" class="btn btn-info">Supprimer</a>
-
+                <a href="javascript:;" *ngIf="item.id" (click)="deleteDeviceNameMapping(item.id)" class="btn btn-danger">Supprimer</a>
             </td>
         </tr>
     </table>
