@@ -22,6 +22,8 @@ import {EditComponent} from "./items/liste-fournisseurs/edit/edit.component";
 import {AddFournisseurComponent} from './add-fournisseur/add-fournisseur.component';
 import {ListeFournisseursComponent} from './items/liste-fournisseurs/index/liste-fournisseurs.component';
 import {ListeDevicesComponent} from './devices/liste-devices.component';
+import {MatTableModule} from "@angular/material/table";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 
 
@@ -52,7 +54,9 @@ import {ListeDevicesComponent} from './devices/liste-devices.component';
         MatButtonModule,
         MatCardModule,
         MatInputModule,
-        MatSortModule
+        MatSortModule,
+        MatTableModule,
+        MatPaginatorModule
     ],
     providers: [],
     bootstrap: [AppComponent]

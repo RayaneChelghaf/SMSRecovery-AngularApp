@@ -1,35 +1,50 @@
-.btn-action {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    margin-right: 5px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.mdc-data-table__header-cell {
+    color: var(--text-color);
+
 }
 
-.btn-action:hover {
-    background-color: #0056b3;
+.matheadercell{
+    background-color: var(--btn-header-color) !important;
+
+}
+.mat-mdc-cell  {
+    padding: 0.5rem;
+    color: var(--text-color);
+
 }
 
-.btn-action i {
-    margin-right: 0.5rem;
+.mat-mdc-table {
+    background: var(--bkg-color);
+
 }
 
-.btn-action.btn-view {
-    background-color: #28a745;
+.mat-mdc-header-cell {
+    
+    background: var(--text-color);
+
 }
 
-.btn-action.btn-edit {
-    background-color: #ffc107;
+
+.mat-mdc-table .mat-mdc-header-cell{ 
+       background: var(--bkg-color);
+
 }
 
-.btn-action.btn-delete {
-    background-color: #dc3545;
+.mat-paginator {
+
+    background: var(--text-color) !important;
+
+
 }
+
+
+table{
+        width: 100%;
+
+      }
+      
+td, th {
+        width: 20%;
+        word-wrap: break-word;
+
+      }

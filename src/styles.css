@@ -57,19 +57,46 @@ body {
     --bkg-color: #fff;
     --btn-txt-color: white;
     --btn-bg-color: #333;
+    --btn-header-color: #eee;
+    --btn-footer-color: white;
 }
 
 body.dark-theme {
     --text-color: #eee;
     --bkg-color: #252222;
-    --btn-txt-color: rgb(46, 43, 43);
-    --btn-bg-color: rgb(20, 211, 138);
+    --btn-txt-color: rgb(45, 45, 45);
+    --btn-bg-color: rgb(20, 200, 150);
+    --btn-header-color: rgb(20, 150, 100);
+    --btn-footer-color: rgb(20, 150, 100);
 }
 
 body {
     background: var(--bkg-color);
 }
 
+
+.mat-mdc-paginator-container {
+
+    background: var(--btn-footer-color);
+    
+}
+
+.mat-mdc-select-value-text {
+
+    color: var(--text-color);
+}
+
+.mat-mdc-text-field-wrapper {
+    color: var(--text-color);
+
+    width: 100%;
+}
+
+
+.mat-mdc-paginator {
+    color: var(--text-color);
+    margin: 0 4px;
+}
 table {
     margin-top: 2rem;
     text-align: center;
@@ -194,7 +221,6 @@ strong {
 .btn-danger:hover {
     color: var(--bkg-color);
 }
-
 .btn.btn-success {
 
     color: var(--bkg-color);
@@ -212,6 +238,22 @@ strong {
     color: var(--btn-bg-color);
 }
 
+.mat-mdc-table thead{
+    text-align: center !important;
+}
+.mat-mdc-table tbody{
+    text-align: center !important;
+}
+.mat-mdc-table .mat-mdc-header-cell {
+    text-align: center !important;
+    background-color: var(--btn-header-color);
+
+}
+
+.mat-mdc-header-cell {
+    text-align: center !important;
+
+}
 input[type="text"] {
     padding: 0.5rem;
     border-radius: 5px;
