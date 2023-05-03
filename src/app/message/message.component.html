@@ -30,7 +30,12 @@
   <p style="text-align: center;" *ngIf="messages === null">Chargement en cours...</p>
 
   <br>
- 
+  
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="+33 ... " #input>
+  </mat-form-field>
+
   <table mat-table class="" style="text-align: center !important;" [dataSource]="dataSource" matSort>
 
     <ng-container matColumnDef="date" style="text-align: center;">
@@ -61,7 +66,9 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="example-element-row"></tr>
       <br>
-
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="5" style="text-align: center;">Aucune donnée pour la recherche "{{input.value}}"</td>
+      </tr>
     </table>
 <br>
     <mat-paginator class="pagination" [pageSizeOptions]="[100, 50, 25, 10, 5]" aria-label="Select page of users..."></mat-paginator>

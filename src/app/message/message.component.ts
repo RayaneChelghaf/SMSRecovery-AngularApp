@@ -27,7 +27,15 @@ export class DeviceComponent implements OnInit, AfterViewInit {
     ngAfterViewInit(): void {
         this.reconnectSortAndPaginator();
     }
-
+    
+    applyFilter(event: Event) {
+        const filterValue = (event.target as HTMLInputElement).value;
+        this.dataSource.filter = filterValue.trim().toLowerCase();
+    
+        if (this.dataSource.paginator) {
+          this.dataSource.paginator.firstPage();
+        }
+      }
     private reconnectSortAndPaginator() {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
