@@ -16,15 +16,16 @@
             <th>Device id (retourné par ADB)</th>
             <th>Url du fournisseur</th>
             <th>Libellé</th>
+            
         </tr>
         <tr *ngFor="let item of items">
             <td>{{ item.deviceId }}</td>
-            <!-- <td>{{ item.name }}</td> -->
-            <td>{{ item.id }}</td>
-            <td>{{ item.label }}</td>
-         
+            <td>{{ item.providerUrl }}</td>
+            <td routerLink="/add-fournisseur/" class="blue-link">{{ item.label }}</td>
         </tr>
     </table>
 
 
 </div>
+
+

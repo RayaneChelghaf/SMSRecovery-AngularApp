@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ProviderService} from "../services/provider.service";
 import {ProviderModel} from "../add-fournisseur/add-fournisseur.component";
 import {Observable, tap} from "rxjs";
-import {DeviceNameMappingService, DeviceNameMapping} from "../services/device-name-mapping.service";
+import {DeviceDetectedService, DeviceDetected} from "../devicedetect/device-detected.service";
 
 
 @Component({
@@ -14,9 +14,9 @@ import {DeviceNameMappingService, DeviceNameMapping} from "../services/device-na
 export class HomeComponent implements OnInit {
 
 
-    public items: DeviceNameMapping[] | null = null;
+    public items: DeviceDetected[] | null = null;
 
-    constructor(private deviceNameMappingService: DeviceNameMappingService) {
+    constructor(private deviceDetectedService: DeviceDetectedService) {
 
     }
 
@@ -24,8 +24,8 @@ export class HomeComponent implements OnInit {
         this.refreshMappingList().subscribe();
     }
 
-    private refreshMappingList(): Observable<DeviceNameMapping[]> {
-        return this.deviceNameMappingService.listMapping().pipe(
+    private refreshMappingList(): Observable<DeviceDetected[]> {
+        return this.deviceDetectedService.listMapping().pipe(
             tap(t => this.items = t)
         )
     }  
