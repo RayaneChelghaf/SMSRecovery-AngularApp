@@ -24,6 +24,7 @@ import {ListeFournisseursComponent} from './items/liste-fournisseurs/index/liste
 import {ListeDevicesComponent} from './devices/liste-devices.component';
 import {MatTableModule} from "@angular/material/table";
 import {MatPaginatorModule} from "@angular/material/paginator";
+import {HomeComponent} from './home/home.component';
 
 
 
@@ -33,6 +34,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
         NavbarComponent,
         AddFournisseurComponent,
         ListeFournisseursComponent,
+        HomeComponent,
         ListeDevicesComponent,
         ViewComponent,
         EditComponent,
