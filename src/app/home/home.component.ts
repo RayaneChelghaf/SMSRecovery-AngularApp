@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
 
 
 
-//   import {Component, OnInit} from '@angular/core';
+// import {Component, OnInit} from '@angular/core';
 // import {ProviderService} from "../services/provider.service";
 // import {ProviderModel} from "../add-fournisseur/add-fournisseur.component";
 // import {Observable, tap} from "rxjs";
@@ -74,9 +74,5 @@ export class HomeComponent implements OnInit {
 //     }  
 
 //     //DeviceNameMapping
-    
-
-
-
 
 //   }
