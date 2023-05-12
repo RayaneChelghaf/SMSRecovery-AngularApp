@@ -5,10 +5,10 @@
   <p style="text-align: center;" *ngIf="messages === null">Chargement en cours...</p>
 
   <br>
-  
+
   <mat-form-field>
     <mat-label>Filtrer</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="+33 ... " [(ngModel)]="filter">
+    <input matInput (keyup)="navigateToRoute()"   placeholder="+33 ... " [(ngModel)]="filter" >
   </mat-form-field>
 
   <table mat-table class="" style="text-align: center !important;" [dataSource]="dataSource" matSort>
@@ -44,7 +44,7 @@
       <tr class="mat-row" *matNoDataRow>
         <td class="mat-cell" colspan="5" style="text-align: center;">Aucune donnée pour la recherche "{{ filter }}"</td>
       </tr>
-      
+
     </table>
 <br>
     <mat-paginator class="pagination" [pageSizeOptions]="[5, 10, 25, 50, 100]" aria-label="Select page of users..."></mat-paginator>
