@@ -1,28 +1,3 @@
-<!-- <div class="container">
-  <h1>Liste des messages</h1>
-
-  <p style="text-align: center;" *ngIf="messages === null">Chargement en cours... </p>
-
-  <br>
-
-  <table class="table table-bordered" style="text-align: center;">
-    <tr>
-      <th>Date</th>
-      <th>Fournisseur</th>
-      <th>Contenu</th>
-      <th>Libellé</th>
-      <th>Device Id</th>
-    </tr>
-    <tr *ngFor="let message of messages">
-      <td>{{ message.date | date: ' dd/MM/YYYY HH:mm:ss' }}</td>
-      <td>{{ message.address }}</td>
-      <td>{{ message.body }}</td>
-      <td>{{ message.label }}</td>
-      <td>{{ message.deviceId }}</td>
-    </tr>
-  </table>
-</div> -->
-
 <div class="container">
 
   <h1>Liste des messages</h1>
@@ -33,7 +8,7 @@
   
   <mat-form-field>
     <mat-label>Filtrer</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="+33 ... " #input>
+    <input matInput (keyup)="applyFilter($event)" placeholder="+33 ... " [(ngModel)]="filter">
   </mat-form-field>
 
   <table mat-table class="" style="text-align: center !important;" [dataSource]="dataSource" matSort>
@@ -67,8 +42,9 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="example-element-row"></tr>
       <br>
       <tr class="mat-row" *matNoDataRow>
-        <td class="mat-cell" colspan="5" style="text-align: center;">Aucune donnée pour la recherche "{{input.value}}"</td>
+        <td class="mat-cell" colspan="5" style="text-align: center;">Aucune donnée pour la recherche "{{ filter }}"</td>
       </tr>
+      
     </table>
 <br>
     <mat-paginator class="pagination" [pageSizeOptions]="[5, 10, 25, 50, 100]" aria-label="Select page of users..."></mat-paginator>
